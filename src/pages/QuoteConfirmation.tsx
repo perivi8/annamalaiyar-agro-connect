@@ -286,14 +286,14 @@ const QuoteConfirmation = () => {
                     <Phone className="w-6 h-6 text-blue-600" />
                     <div>
                       <p className="font-medium">Call Us</p>
-                      <p className="text-blue-600">+91 98765 43210</p>
+                      <p className="text-blue-600">+91 98943 77407</p>
                     </div>
                   </div>
                   <div className="flex items-center space-x-3">
                     <Mail className="w-6 h-6 text-blue-600" />
                     <div>
                       <p className="font-medium">Email Us</p>
-                      <p className="text-blue-600">quotes@annamalaiyar-agro.com</p>
+                      <p className="text-blue-600">contact@annamalaiyaragriculturalmachinery.shop</p>
                     </div>
                   </div>
                 </div>

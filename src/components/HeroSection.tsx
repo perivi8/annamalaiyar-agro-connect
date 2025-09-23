@@ -60,10 +60,10 @@ const HeroSection = () => {
             <div className="pt-6 border-t border-border/50">
               <p className="text-sm text-muted-foreground mb-2">Quick Contact:</p>
               <div className="flex flex-col sm:flex-row gap-4 text-sm">
-                <a href="tel:+919876543210" className="flex items-center gap-2 text-primary hover:underline">
-                  📞 +91 98765 43210
+                <a href="tel:+919894377407" className="flex items-center gap-2 text-primary hover:underline">
+                  📞 +91 98943 77407
                 </a>
-                <a href="https://wa.me/919876543210" className="flex items-center gap-2 text-primary hover:underline">
+                <a href="https://wa.me/919894377407" className="flex items-center gap-2 text-primary hover:underline">
                   💬 WhatsApp Now
                 </a>
               </div>

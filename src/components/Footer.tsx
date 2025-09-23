@@ -67,23 +67,24 @@ const Footer = () => {
               <div className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 mt-0.5 flex-shrink-0" />
                 <div>
-                  <p>123 Agriculture Street</p>
-                  <p>Coimbatore, Tamil Nadu</p>
-                  <p>641001</p>
+                  <p>OPP TO NEW TALUK OFFICE</p>
+                  <p>14/88, A.C.K ROAD, Madurantakam</p>
+                  <p>Maduranthakam, Chengalpattu</p>
+                  <p>Tamil Nadu, 603306</p>
                 </div>
               </div>
 
               <div className="flex items-center gap-3">
                 <Phone className="h-5 w-5 flex-shrink-0" />
-                <a href="tel:+919876543210" className="hover:text-primary-foreground transition-colors">
-                  +91 98765 43210
+                <a href="tel:+919894377407" className="hover:text-primary-foreground transition-colors">
+                  +91 98943 77407
                 </a>
               </div>
 
               <div className="flex items-center gap-3">
                 <Mail className="h-5 w-5 flex-shrink-0" />
-                <a href="mailto:info@thiruannamalaiyar.com" className="hover:text-primary-foreground transition-colors">
-                  info@thiruannamalaiyar.com
+                <a href="mailto:contact@annamalaiyaragriculturalmachinery.shop" className="hover:text-primary-foreground transition-colors">
+                  contact@annamalaiyaragriculturalmachinery.shop
                 </a>
               </div>
 

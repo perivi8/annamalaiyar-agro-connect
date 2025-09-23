@@ -154,7 +154,7 @@ const ProductCard = ({
           <div className="text-center pt-2 border-t border-border/50">
             <p className="text-xs text-muted-foreground mb-1">Need help choosing?</p>
             <Button variant="link" size="sm" className="text-primary p-0 h-auto">
-              Call Expert: +91 98765 43210
+              Call Expert: +91 98943 77407
             </Button>
           </div>
         )}

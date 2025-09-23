@@ -13,21 +13,21 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Phone Support",
-    details: ["+91 98765 43210", "+91 87654 32109"],
+    details: ["+91 98943 77407"],
     description: "Available 24/7 for emergency support",
     color: "bg-green-100 text-green-600"
   },
   {
     icon: Mail,
     title: "Email Support",
-    details: ["info@annamalaiyar-agro.com", "support@annamalaiyar-agro.com"],
+    details: ["contact@annamalaiyaragriculturalmachinery.shop"],
     description: "We respond within 2 hours",
     color: "bg-blue-100 text-blue-600"
   },
   {
     icon: MapPin,
     title: "Head Office",
-    details: ["123 Agricultural Hub", "Chennai, Tamil Nadu 600001"],
+    details: ["OPP TO NEW TALUK OFFICE, 14/88, A.C.K ROAD", "Madurantakam, Maduranthakam, Chengalpattu, Tamil Nadu, 603306"],
     description: "Visit us for in-person consultation",
     color: "bg-purple-100 text-purple-600"
   },
@@ -42,28 +42,10 @@ const contactInfo = [
 
 const branches = [
   {
-    city: "Chennai",
-    address: "123 Agricultural Hub, Anna Nagar, Chennai - 600001",
-    phone: "+91 98765 43210",
-    manager: "Mr. Rajesh Kumar"
-  },
-  {
-    city: "Coimbatore",
-    address: "456 Farm Equipment Center, RS Puram, Coimbatore - 641002",
-    phone: "+91 87654 32109",
-    manager: "Ms. Priya Sharma"
-  },
-  {
-    city: "Madurai",
-    address: "789 Agri Solutions, KK Nagar, Madurai - 625020",
-    phone: "+91 76543 21098",
-    manager: "Mr. Suresh Babu"
-  },
-  {
-    city: "Salem",
-    address: "321 Machinery Plaza, Fairlands, Salem - 636016",
-    phone: "+91 65432 10987",
-    manager: "Ms. Kavitha Devi"
+    city: "Madurantakam",
+    address: "OPP TO NEW TALUK OFFICE, 14/88, A.C.K ROAD, Madurantakam, Maduranthakam, Chengalpattu, Tamil Nadu, 603306",
+    phone: "+91 98943 77407",
+    manager: "Agricultural Machinery Specialist"
   }
 ];
 

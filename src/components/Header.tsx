@@ -181,7 +181,7 @@ const Header = () => {
       <div className="fixed bottom-4 right-4 z-50 md:hidden">
         <Button 
           className="btn-cta rounded-full h-14 w-14 shadow-lg"
-          onClick={() => window.open('https://wa.me/919876543210', '_blank')}
+          onClick={() => window.open('https://wa.me/919894377407', '_blank')}
         >
           <MessageCircle className="h-6 w-6" />
         </Button>

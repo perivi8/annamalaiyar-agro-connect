@@ -128,7 +128,7 @@ const AfterSalesSection = () => {
                 <Phone className="h-5 w-5 text-primary flex-shrink-0" />
                 <div>
                   <div className="text-sm font-medium text-foreground">Emergency Service Hotline</div>
-                  <div className="text-lg font-bold text-primary">+91 98765 43210</div>
+                  <div className="text-lg font-bold text-primary">+91 98943 77407</div>
                 </div>
               </div>
             </div>

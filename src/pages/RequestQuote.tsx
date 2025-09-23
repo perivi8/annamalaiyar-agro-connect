@@ -177,7 +177,7 @@ const RequestQuote = () => {
                         required
                         value={formData.phone}
                         onChange={handleInputChange}
-                        placeholder="+91 98765 43210"
+                        placeholder="+91 98943 77407"
                       />
                     </div>
                   </div>
