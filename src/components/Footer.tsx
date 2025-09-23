@@ -1,5 +1,6 @@
 import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Youtube, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -37,12 +38,12 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-6">Products</h4>
             <ul className="space-y-3 text-primary-foreground/80">
-              <li><a href="#tractors" className="hover:text-primary-foreground transition-colors">Tractors</a></li>
-              <li><a href="#tillers" className="hover:text-primary-foreground transition-colors">Tillers</a></li>
-              <li><a href="#sprayers" className="hover:text-primary-foreground transition-colors">Sprayers</a></li>
-              <li><a href="#harvesters" className="hover:text-primary-foreground transition-colors">Harvesters</a></li>
-              <li><a href="#ploughs" className="hover:text-primary-foreground transition-colors">Ploughs</a></li>
-              <li><a href="#spare-parts" className="hover:text-primary-foreground transition-colors">Spare Parts</a></li>
+              <li><Link to="/machinery/tractors" className="hover:text-primary-foreground transition-colors">Tractors</Link></li>
+              <li><Link to="/machinery/tillers" className="hover:text-primary-foreground transition-colors">Tillers</Link></li>
+              <li><Link to="/machinery/sprayers" className="hover:text-primary-foreground transition-colors">Sprayers</Link></li>
+              <li><Link to="/machinery/harvesters" className="hover:text-primary-foreground transition-colors">Harvesters</Link></li>
+              <li><Link to="/machinery/ploughs" className="hover:text-primary-foreground transition-colors">Ploughs</Link></li>
+              <li><Link to="/spare-parts" className="hover:text-primary-foreground transition-colors">Spare Parts</Link></li>
             </ul>
           </div>
 
@@ -50,12 +51,12 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-6">Services</h4>
             <ul className="space-y-3 text-primary-foreground/80">
-              <li><a href="#maintenance" className="hover:text-primary-foreground transition-colors">Maintenance</a></li>
-              <li><a href="#repair" className="hover:text-primary-foreground transition-colors">Repairs</a></li>
-              <li><a href="#installation" className="hover:text-primary-foreground transition-colors">Installation</a></li>
-              <li><a href="#training" className="hover:text-primary-foreground transition-colors">Training</a></li>
-              <li><a href="#warranty" className="hover:text-primary-foreground transition-colors">Warranty</a></li>
-              <li><a href="#financing" className="hover:text-primary-foreground transition-colors">Financing</a></li>
+              <li><Link to="/services/maintenance" className="hover:text-primary-foreground transition-colors">Maintenance</Link></li>
+              <li><Link to="/services/repairs" className="hover:text-primary-foreground transition-colors">Repairs</Link></li>
+              <li><Link to="/services/installation" className="hover:text-primary-foreground transition-colors">Installation</Link></li>
+              <li><Link to="/services/training" className="hover:text-primary-foreground transition-colors">Training</Link></li>
+              <li><Link to="/services/warranty" className="hover:text-primary-foreground transition-colors">Warranty</Link></li>
+              <li><Link to="/services/financing" className="hover:text-primary-foreground transition-colors">Financing</Link></li>
             </ul>
           </div>
 
@@ -109,13 +110,17 @@ const Footer = () => {
               Transform your farming with the right equipment.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button className="bg-accent text-accent-foreground hover:bg-accent/90 px-8">
-                Request Free Quote
-              </Button>
-              <Button variant="outline" className="border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10 px-8">
-                <MessageCircle className="mr-2 h-5 w-5" />
-                WhatsApp Chat
-              </Button>
+              <Link to="/request-quote">
+                <Button className="bg-accent text-accent-foreground hover:bg-accent/90 px-8">
+                  Request Free Quote
+                </Button>
+              </Link>
+              <Link to="/contact">
+                <Button variant="outline" className="border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10 px-8">
+                  <MessageCircle className="mr-2 h-5 w-5" />
+                  WhatsApp Chat
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
