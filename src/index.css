@@ -133,95 +133,23 @@ All colors MUST be HSL for proper theming.
 @layer base {
   * {
     @apply border-border;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-
-  html {
-    -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: transparent;
-    height: 100%;
   }
 
   body {
     @apply bg-background text-foreground;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
-    line-height: 1.5;
-    min-height: 100vh;
-    min-height: 100dvh;
-    display: flex;
-    flex-direction: column;
-    overflow-x: hidden;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
   }
   
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Poppins', system-ui, -apple-system, sans-serif;
     font-weight: 800;
-    line-height: 1.2;
-  }
-  
-  /* Responsive images */
-  img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-  }
-  
-  /* Responsive iframes */
-  iframe, 
-  embed, 
-  object, 
-  video {
-    max-width: 100%;
-    height: auto;
   }
 }
 
 @layer components {
-  /* Responsive container */
-  .container {
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 1rem;
-  }
-  
-  @media (min-width: 640px) {
-    .container {
-      max-width: 640px;
-      padding: 0 1.5rem;
-    }
-  }
-  
-  @media (min-width: 768px) {
-    .container {
-      max-width: 768px;
-    }
-  }
-  
-  @media (min-width: 1024px) {
-    .container {
-      max-width: 1024px;
-    }
-  }
-  
-  @media (min-width: 1280px) {
-    .container {
-      max-width: 1280px;
-    }
-  }
-  
-  @media (min-width: 1536px) {
-    .container {
-      max-width: 1536px;
-    }
-  }
-  
   /* Agricultural product card hover effects */
   .product-card {
-    @apply relative overflow-hidden rounded-lg bg-card shadow-[--shadow-card] transition-all duration-300 w-full h-full;
+    @apply relative overflow-hidden rounded-lg bg-card shadow-[--shadow-card] transition-all duration-300;
   }
   
   .product-card:hover {
@@ -236,28 +164,17 @@ All colors MUST be HSL for proper theming.
     @apply scale-105;
   }
   
-  /* Responsive typography */
-  html {
-    font-size: 16px;
-  }
-  
-  @media (max-width: 640px) {
-    html {
-      font-size: 14px;
-    }
-  }
-  
   /* CTA button variants */
   .btn-quote {
-    @apply inline-flex items-center justify-center rounded-md bg-primary px-4 sm:px-6 py-2 sm:py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring w-full sm:w-auto;
+    @apply inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring;
   }
   
   .btn-cta {
-    @apply inline-flex items-center justify-center rounded-md bg-[hsl(var(--cta))] px-4 sm:px-6 py-2 sm:py-3 text-sm font-semibold text-[hsl(var(--cta-foreground))] shadow-[--shadow-cta] transition-all duration-300 hover:bg-[hsl(var(--cta))]/90 hover:scale-105 w-full sm:w-auto;
+    @apply inline-flex items-center justify-center rounded-md bg-[hsl(var(--cta))] px-6 py-3 text-sm font-semibold text-[hsl(var(--cta-foreground))] shadow-[--shadow-cta] transition-all duration-300 hover:bg-[hsl(var(--cta))]/90 hover:scale-105;
   }
   
   .btn-accent {
-    @apply inline-flex items-center justify-center rounded-md bg-accent px-4 sm:px-6 py-2 sm:py-3 text-sm font-semibold text-accent-foreground transition-colors hover:bg-accent/90 w-full sm:w-auto;
+    @apply inline-flex items-center justify-center rounded-md bg-accent px-6 py-3 text-sm font-semibold text-accent-foreground transition-colors hover:bg-accent/90;
   }
   
   /* Hero gradients */

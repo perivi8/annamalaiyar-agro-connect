@@ -132,10 +132,11 @@ const Footer = () => {
         <div className="container px-4 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-primary-foreground/60">
             <p>© 2024 Thiru Annamalaiyar Agricultural Machinery. All rights reserved.</p>
-            <div className="flex gap-6">
-              <a href="#privacy" className="hover:text-primary-foreground transition-colors">Privacy Policy</a>
-              <a href="#terms" className="hover:text-primary-foreground transition-colors">Terms of Service</a>
-              <a href="#returns" className="hover:text-primary-foreground transition-colors">Returns & Refunds</a>
+            <div className="flex flex-wrap gap-4 md:gap-6">
+              <Link to="/privacy-policy" className="hover:text-primary-foreground transition-colors whitespace-nowrap">Privacy Policy</Link>
+              <Link to="/terms-and-conditions" className="hover:text-primary-foreground transition-colors whitespace-nowrap">Terms & Conditions</Link>
+              <Link to="/shipping-policy" className="hover:text-primary-foreground transition-colors whitespace-nowrap">Shipping Policy</Link>
+              <Link to="/cancellation-refund-policy" className="hover:text-primary-foreground transition-colors whitespace-nowrap">Cancellation & Refund</Link>
             </div>
           </div>
         </div>

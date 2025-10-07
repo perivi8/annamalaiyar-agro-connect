@@ -118,24 +118,24 @@ export const sprayerModels = [
   },
   {
     id: 6,
-    name: "Drone Sprayer 10L",
-    type: "Drone Sprayer",
-    price: "₹3,50,000",
-    originalPrice: "₹4,00,000",
+    name: "Neptune Simplify Farming NF-02 ",
+    type: "Manual Knapsack Sprayer",
+    price: "₹2,500",
+    originalPrice: "₹3,000",
     image: sprayer6,
-    rating: 4.9,
-    reviews: 34,
-    features: ["10L Payload", "GPS Navigation", "Auto Flight", "Remote Control"],
-    description: "State-of-the-art drone sprayer with 10L payload capacity. Features GPS navigation, automatic flight patterns, and remote control operation.",
+    rating: 4.5,
+    reviews: 142,
+    features: ["16L Tank Capacity", "High-Pressure Pump", "Telescopic Lance", "3 Nozzles Included"],
+    description: "Neptune Simplify Farming NF-02 Manual Knapsack Sprayer with hand-operated high-pressure pump and 16L tank capacity. Features telescopic lance with 3 nozzles, ideal for farming, gardening & pesticide spraying.",
     specifications: {
-      "Payload Capacity": "10 Liters",
-      "Flight Time": "15-20 minutes",
-      "Coverage Area": "8-10 acres/hour",
-      "Control Range": "2 km",
-      "GPS Accuracy": "±1 meter",
-      "Weight": "15 kg"
+      "Tank Capacity": "16 Liters",
+      "Pump Type": "Hand-Operated High-Pressure",
+      "Lance Type": "Telescopic",
+      "Nozzles Included": "3 Different Types",
+      "Material": "HDPE Tank",
+      "Weight": "2.2 kg"
     },
-    popular: true,
-    discount: "13%"
+    popular: false,
+    discount: "17%"
   }
 ];

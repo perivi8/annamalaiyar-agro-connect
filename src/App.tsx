@@ -3,6 +3,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HelmetProvider } from 'react-helmet-async';
 import ScrollToTop from "./components/ScrollToTop";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
@@ -33,15 +34,20 @@ import Wishlist from "./pages/Wishlist";
 import Checkout from "./pages/Checkout";
 import OrderConfirmation from "./pages/OrderConfirmation";
 import ProductDetail from "./pages/ProductDetail";
+import PrivacyPolicy from "./pages/legal/PrivacyPolicy";
+import TermsAndConditions from "./pages/legal/TermsAndConditions";
+import ShippingPolicy from "./pages/legal/ShippingPolicy";
+import CancellationRefundPolicy from "./pages/legal/CancellationRefundPolicy";
 
 const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
+    <HelmetProvider>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
@@ -80,11 +86,18 @@ const App = () => (
           {/* Product Detail Routes */}
           <Route path="/product/:category/:id" element={<ProductDetail />} />
           
+          {/* Legal Pages */}
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+          <Route path="/shipping-policy" element={<ShippingPolicy />} />
+          <Route path="/cancellation-refund-policy" element={<CancellationRefundPolicy />} />
+          
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
-    </TooltipProvider>
+      </TooltipProvider>
+    </HelmetProvider>
   </QueryClientProvider>
 );
 
