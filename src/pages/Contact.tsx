@@ -20,7 +20,7 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email Support",
-    details: ["contact@annamalaiyaragriculturalmachinery.shop"],
+    details: ["thiruannamalaiyar014@gmail.com"],
     description: "We respond within 2 hours",
     color: "bg-blue-100 text-blue-600"
   },

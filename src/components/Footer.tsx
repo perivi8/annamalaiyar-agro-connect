@@ -83,8 +83,8 @@ const Footer = () => {
 
               <div className="flex items-center gap-3">
                 <Mail className="h-5 w-5 flex-shrink-0" />
-                <a href="mailto:contact@annamalaiyaragriculturalmachinery.shop" className="hover:text-primary-foreground transition-colors">
-                  contact@annamalaiyaragriculturalmachinery.shop
+                <a href="mailto:thiruannamalaiyar014@gmail.com" className="hover:text-primary-foreground transition-colors">
+                  thiruannamalaiyar014@gmail.com
                 </a>
               </div>
 
@@ -131,7 +131,7 @@ const Footer = () => {
       <div className="border-t border-primary-foreground/20">
         <div className="container px-4 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-primary-foreground/60">
-            <p>© 2024 Thiru Annamalaiyar Agricultural Machinery. All rights reserved.</p>
+            <p>© 2021 Thiru Annamalaiyar Agricultural Machinery. All rights reserved.</p>
             <div className="flex flex-wrap gap-4 md:gap-6">
               <Link to="/privacy-policy" className="hover:text-primary-foreground transition-colors whitespace-nowrap">Privacy Policy</Link>
               <Link to="/terms-and-conditions" className="hover:text-primary-foreground transition-colors whitespace-nowrap">Terms & Conditions</Link>

@@ -256,6 +256,17 @@ const OrderConfirmation = () => {
                       <span>₹{orderData.total.toLocaleString()}</span>
                     </div>
 
+                    {/* Payment Status */}
+                    <div className="bg-yellow-50 p-4 rounded-lg border border-yellow-200">
+                      <div className="flex items-center justify-between">
+                        <span className="font-medium text-yellow-900">Payment Method</span>
+                        <Badge className="bg-yellow-500">COD</Badge>
+                      </div>
+                      <p className="text-sm text-yellow-700 mt-1">
+                        Cash on Delivery - Payment to be collected at delivery
+                      </p>
+                    </div>
+
                     {/* Estimated Delivery */}
                     <div className="bg-blue-50 p-4 rounded-lg">
                       <div className="flex items-center mb-2">

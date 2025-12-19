@@ -232,6 +232,49 @@ const Checkout = () => {
                   </CardContent>
                 </Card>
 
+                {/* Payment Method */}
+                <Card>
+                  <CardHeader>
+                    <CardTitle>Payment Method</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <div className="flex items-center gap-3 p-4 border-2 border-green-500 rounded-lg bg-green-50">
+                      <input
+                        type="radio"
+                        id="cod"
+                        name="paymentMethod"
+                        checked={true}
+                        readOnly
+                        className="w-4 h-4 text-green-600"
+                      />
+                      <label htmlFor="cod" className="flex-1 cursor-pointer">
+                        <span className="font-medium text-gray-900">Cash on Delivery (COD)</span>
+                        <p className="text-sm text-gray-600">Pay when your order is delivered</p>
+                      </label>
+                      <Badge className="bg-green-600">Active</Badge>
+                    </div>
+                    
+                    <div className="flex items-center gap-3 p-4 border rounded-lg bg-gray-100 opacity-60 cursor-not-allowed">
+                      <input
+                        type="radio"
+                        id="online"
+                        name="paymentMethod"
+                        disabled
+                        className="w-4 h-4"
+                      />
+                      <label htmlFor="online" className="flex-1">
+                        <span className="font-medium text-gray-500">Online Payment</span>
+                        <p className="text-sm text-gray-400">UPI, Cards, Net Banking</p>
+                      </label>
+                      <Badge variant="secondary" className="bg-gray-300 text-gray-600">Unavailable</Badge>
+                    </div>
+                    
+                    <p className="text-sm text-gray-500 mt-2">
+                      * Online payment is currently unavailable. Please select Cash on Delivery.
+                    </p>
+                  </CardContent>
+                </Card>
+
               </div>
 
               {/* Order Summary */}
@@ -313,7 +356,7 @@ const Checkout = () => {
                     </Button>
 
                     <div className="text-xs text-gray-500 text-center">
-                      Your order will be processed and you'll receive a confirmation
+                      Your order will be confirmed. Payment to be collected on delivery (COD).
                     </div>
 
                     {/* Back to Cart */}

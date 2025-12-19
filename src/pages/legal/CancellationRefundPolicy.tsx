@@ -88,7 +88,7 @@ export default function CancellationRefundPolicy() {
             <p className="font-semibold">Thiru Annamalaiyar Agricultural Machinery</p>
             <p>📍 OPP TO NEW TALUK OFFICE, 14/88, A.C.K Road, Madurantakam, Chengalpattu, Tamil Nadu – 603306</p>
             <p>📞 Phone: <a href="tel:+919894377407" className="text-blue-600 hover:underline">+91 98943 77407</a></p>
-            <p>📧 Email: <a href="mailto:contact@annamalaiyaragriculturalmachinery.shop" className="text-blue-600 hover:underline">contact@annamalaiyaragriculturalmachinery.shop</a></p>
+            <p>📧 Email: <a href="mailto:thiruannamalaiyar014@gmail.com" className="text-blue-600 hover:underline">thiruannamalaiyar014@gmail.com</a></p>
           </address>
           
           <p className="mt-8 text-sm text-gray-500">

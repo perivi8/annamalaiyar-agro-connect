@@ -293,7 +293,7 @@ const QuoteConfirmation = () => {
                     <Mail className="w-6 h-6 text-blue-600" />
                     <div>
                       <p className="font-medium">Email Us</p>
-                      <p className="text-blue-600">contact@annamalaiyaragriculturalmachinery.shop</p>
+                      <p className="text-blue-600">thiruannamalaiyar014@gmail.com</p>
                     </div>
                   </div>
                 </div>
