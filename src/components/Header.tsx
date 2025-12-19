@@ -49,7 +49,8 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <>
+    <header className="fixed top-0 left-0 right-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between px-4">
         {/* Logo */}
         <Link to="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
@@ -102,7 +103,7 @@ const Header = () => {
           </div>
           
           <Link to="/request-quote">
-            <Button variant="outline" size="sm" className="btn-quote">
+            <Button size="sm" className="btn-quote">
               <Phone className="mr-2 h-4 w-4" />
               Request Quote
             </Button>
@@ -126,7 +127,7 @@ const Header = () => {
       {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="border-t bg-background md:hidden">
-          <div className="container px-4 py-4">
+          <div className="container py-4">
             <nav className="flex flex-col space-y-4">
               {navItems.map((item) => (
                 <Link
@@ -161,7 +162,7 @@ const Header = () => {
                 </div>
                 
                 <Link to="/request-quote" onClick={() => setIsMenuOpen(false)}>
-                  <Button variant="outline" size="sm" className="btn-quote w-full">
+                  <Button size="sm" className="btn-quote w-full">
                     <Phone className="mr-2 h-4 w-4" />
                     Request Quote
                   </Button>
@@ -177,17 +178,23 @@ const Header = () => {
         </div>
       )}
 
-      {/* WhatsApp Sticky Button - Mobile */}
-      <div className="fixed bottom-4 right-4 z-50 md:hidden">
-        <Button 
-          className="btn-cta rounded-full h-14 w-14 shadow-lg"
-          onClick={() => window.open('https://wa.me/919894377407', '_blank')}
-        >
-          <MessageCircle className="h-6 w-6" />
-        </Button>
-      </div>
     </header>
+    {/* Spacer for fixed header */}
+    <div className="h-16" />
+    </>
   );
 };
+
+// WhatsApp Floating Button Component - exported separately
+export const WhatsAppButton = () => (
+  <a 
+    href="https://wa.me/919894377407" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white rounded-full h-14 w-14 shadow-lg flex items-center justify-center transition-all hover:scale-110"
+  >
+    <MessageCircle className="h-7 w-7" />
+  </a>
+);
 
 export default Header;

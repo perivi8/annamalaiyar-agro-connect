@@ -26,7 +26,8 @@ export const tillerModels = [
       "Blade Material": "Hardened Steel"
     },
     popular: false,
-    discount: "10%"
+    discount: "10%",
+    inStock: true
   },
   {
     id: 2,
@@ -48,7 +49,8 @@ export const tillerModels = [
       "Frame Material": "High Tensile Steel"
     },
     popular: true,
-    discount: "13%"
+    discount: "13%",
+    inStock: true
   },
   {
     id: 3,
@@ -70,7 +72,8 @@ export const tillerModels = [
       "Roller Type": "Cage Roller"
     },
     popular: true,
-    discount: "11%"
+    discount: "11%",
+    inStock: true
   },
   {
     id: 4,
@@ -92,7 +95,8 @@ export const tillerModels = [
       "Disc Material": "Boron Steel"
     },
     popular: false,
-    discount: "13%"
+    discount: "13%",
+    inStock: true
   },
   {
     id: 5,
@@ -114,7 +118,8 @@ export const tillerModels = [
       "Shank Material": "Spring Steel"
     },
     popular: false,
-    discount: "10%"
+    discount: "10%",
+    inStock: true
   },
   {
     id: 6,
@@ -136,6 +141,7 @@ export const tillerModels = [
       "Tine Material": "Spring Steel"
     },
     popular: true,
-    discount: "11%"
+    discount: "11%",
+    inStock: true
   }
 ];

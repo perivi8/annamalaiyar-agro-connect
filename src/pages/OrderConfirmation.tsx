@@ -82,7 +82,7 @@ const OrderConfirmation = () => {
       
       {/* Success Header */}
       <section className="bg-gradient-to-r from-green-600 to-green-800 text-white py-16">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto">
           <div className="max-w-4xl mx-auto text-center">
             <div className="w-24 h-24 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
               <CheckCircle className="w-12 h-12 text-white" />
@@ -100,7 +100,7 @@ const OrderConfirmation = () => {
 
       {/* Order Details */}
       <section className="py-16">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto">
           <div className="max-w-6xl mx-auto">
             
             {/* Order Status Timeline */}

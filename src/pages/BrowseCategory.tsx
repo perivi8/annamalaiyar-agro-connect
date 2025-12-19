@@ -107,7 +107,7 @@ const categoryData = {
         originalPrice: "₹3,200",
         image: engine4,
         compatibility: "Multiple Engine Types",
-        inStock: false,
+        inStock: true,
         rating: 4.7,
         reviews: 78,
         brand: "Swaraj",
@@ -156,7 +156,7 @@ const categoryData = {
         originalPrice: "₹10,500",
         image: transmission1,
         compatibility: "Tractor 75-90HP",
-        inStock: false,
+        inStock: true,
         rating: 4.7,
         reviews: 67,
         brand: "Mahindra",
@@ -282,7 +282,7 @@ const categoryData = {
         originalPrice: "₹2,650",
         image: electrical3,
         compatibility: "Multiple Models",
-        inStock: false,
+        inStock: true,
         rating: 4.4,
         reviews: 52,
         brand: "Mahindra",
@@ -500,7 +500,7 @@ const BrowseCategory = () => {
       
       {/* Breadcrumb & Header */}
       <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-12">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto">
           <div className="max-w-6xl mx-auto">
             {/* Breadcrumb */}
             <div className="flex items-center text-sm mb-6 opacity-90">
@@ -547,7 +547,7 @@ const BrowseCategory = () => {
 
       {/* Filters & Controls */}
       <section className="py-6 border-b">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto">
           <div className="max-w-6xl mx-auto">
             <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
               <div className="flex flex-wrap items-center gap-4">
@@ -615,7 +615,7 @@ const BrowseCategory = () => {
 
       {/* Parts Grid/List */}
       <section className="py-12">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto">
           <div className="max-w-6xl mx-auto">
             {filteredParts.length === 0 ? (
               <div className="text-center py-12">
@@ -712,7 +712,7 @@ const BrowseCategory = () => {
 
       {/* Services Section */}
       <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-gray-900 mb-8">
               Why Choose Our {currentCategory.name}?

@@ -14,7 +14,7 @@ import { sprayerModels } from "@/data";
       
 //       {/* Hero Section */}
 //       <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20">
-//         <div className="container mx-auto px-4">
+//         <div className="container mx-auto">
 //           <div className="max-w-4xl mx-auto text-center">
 //             <h1 className="text-4xl md:text-6xl font-bold mb-6">
 //               Advanced Sprayers
@@ -41,7 +41,7 @@ import { sprayerModels } from "@/data";
 
 //       {/* Sprayers Grid */}
 //       <section className="py-16">
-//         <div className="container mx-auto px-4">
+//         <div className="container mx-auto">
 //           <div className="text-center mb-12">
 //             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
 //               Available Sprayer Models
@@ -157,7 +157,7 @@ const Sprayers = () => {
       
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Advanced Sprayers
@@ -184,7 +184,7 @@ const Sprayers = () => {
 
       {/* Sprayers Grid */}
       <section className="py-16">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Available Sprayer Models

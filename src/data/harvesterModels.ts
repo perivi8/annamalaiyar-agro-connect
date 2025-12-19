@@ -26,7 +26,8 @@ export const harvesterModels = [
       "Weight": "2800 kg"
     },
     popular: true,
-    discount: "3%"
+    discount: "3%",
+    inStock: true
   },
   {
     id: 2,
@@ -48,7 +49,8 @@ export const harvesterModels = [
       "Weight": "2200 kg"
     },
     popular: false,
-    discount: "11%"
+    discount: "11%",
+    inStock: true
   },
   {
     id: 3,
@@ -70,7 +72,8 @@ export const harvesterModels = [
       "Weight": "3200 kg"
     },
     popular: true,
-    discount: "8%"
+    discount: "8%",
+    inStock: true
   },
   {
     id: 4,
@@ -92,7 +95,8 @@ export const harvesterModels = [
       "Weight": "3800 kg"
     },
     popular: false,
-    discount: "10%"
+    discount: "10%",
+    inStock: true
   },
   {
     id: 5,
@@ -114,7 +118,8 @@ export const harvesterModels = [
       "Weight": "3000 kg"
     },
     popular: false,
-    discount: "8%"
+    discount: "8%",
+    inStock: true
   },
   {
     id: 6,
@@ -136,6 +141,7 @@ export const harvesterModels = [
       "Weight": "1800 kg"
     },
     popular: false,
-    discount: "13%"
+    discount: "13%",
+    inStock: true
   }
 ];

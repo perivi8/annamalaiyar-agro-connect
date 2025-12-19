@@ -9,6 +9,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Link } from "react-router-dom";
 import { ArrowRight, Search, Filter, Star, ShoppingCart, Heart, Eye, Truck, Shield } from "lucide-react";
 import { useState } from "react";
+import { useToast } from "@/hooks/use-toast";
 
 import shopNow1 from "@/assets/shop-now1.jpg";
 import shopNow2 from "@/assets/shop-now2.jpg";
@@ -116,7 +117,7 @@ const products = [
       "Fuel Tank": "45 Liters",
       "Weight": "2800 kg"
     },
-    inStock: false,
+    inStock: true,
     discount: "3%",
     isPopular: true
   },
@@ -336,6 +337,7 @@ const sortOptions = [
 ];
 
 const ShopNow = () => {
+  const { toast } = useToast();
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [sortBy, setSortBy] = useState("popular");
@@ -399,7 +401,11 @@ const ShopNow = () => {
   const addToCart = (product: any) => {
     try {
       if (!product || !product.id || !product.name || !product.price) {
-        alert('Invalid product data');
+        toast({
+          title: "Error",
+          description: "Invalid product data",
+          variant: "destructive",
+        });
         return;
       }
 
@@ -426,10 +432,17 @@ const ShopNow = () => {
       
       localStorage.setItem('cart', JSON.stringify(cart));
       window.dispatchEvent(new Event('cartUpdated'));
-      alert(`${product.name} added to cart!`);
+      toast({
+        title: "Added to Cart",
+        description: `${product.name} has been added to your cart`,
+      });
     } catch (error) {
       console.error('Error adding to cart:', error);
-      alert('Failed to add item to cart');
+      toast({
+        title: "Error",
+        description: "Failed to add item to cart",
+        variant: "destructive",
+      });
     }
   };
 
@@ -441,9 +454,15 @@ const ShopNow = () => {
       wishlist.push(product);
       localStorage.setItem('wishlist', JSON.stringify(wishlist));
       window.dispatchEvent(new Event('wishlistUpdated'));
-      alert(`${product.name} added to wishlist!`);
+      toast({
+        title: "Added to Wishlist",
+        description: `${product.name} has been added to your wishlist`,
+      });
     } else {
-      alert(`${product.name} is already in your wishlist!`);
+      toast({
+        title: "Already in Wishlist",
+        description: `${product.name} is already in your wishlist`,
+      });
     }
   };
 
@@ -465,7 +484,7 @@ const ShopNow = () => {
       
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-emerald-600 to-emerald-800 text-white py-16">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto">
           <div className="max-w-4xl mx-auto text-center">
             <div className="mb-4">
               <h2 className="text-lg md:text-xl font-semibold opacity-90 mb-2">
@@ -521,7 +540,7 @@ const ShopNow = () => {
 
       {/* Filters and Sort */}
       <section className="py-8 bg-gray-50 border-b">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="flex items-center gap-4">
               <span className="text-gray-600">
@@ -555,7 +574,7 @@ const ShopNow = () => {
       {/* Advanced Filters */}
       {showFilters && (
         <section className="py-8 bg-white border-b">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               
               {/* Price Range Filter */}
@@ -706,7 +725,7 @@ const ShopNow = () => {
 
       {/* Products Grid */}
       <section className="py-16">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {sortedProducts.map((product) => (
               <Card key={product.id} className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg relative overflow-hidden">
@@ -802,20 +821,34 @@ const ShopNow = () => {
                     
                     {/* Action Buttons */}
                     <div className="flex gap-2">
-                      <Button 
-                        className="flex-1 bg-emerald-600 hover:bg-emerald-700" 
-                        size="sm"
-                        disabled={!product.inStock}
-                        onClick={() => addToCart(product)}
-                      >
-                        <ShoppingCart className="mr-2 h-4 w-4" />
-                        {product.inStock ? "Add to Cart" : "Out of Stock"}
-                      </Button>
-                      <Link to="/request-quote">
-                        <Button variant="outline" size="sm">
-                          Quote
+                      {product.category === 'spare-parts' ? (
+                        <Button 
+                          className="flex-1 bg-emerald-600 hover:bg-emerald-700" 
+                          size="sm"
+                          disabled={!product.inStock}
+                          onClick={() => addToCart(product)}
+                        >
+                          <ShoppingCart className="mr-2 h-4 w-4" />
+                          {product.inStock ? "Add to Cart" : "Out of Stock"}
                         </Button>
-                      </Link>
+                      ) : (
+                        <Link to="/request-quote" className="flex-1">
+                          <Button 
+                            className="w-full bg-emerald-600 hover:bg-emerald-700" 
+                            size="sm"
+                          >
+                            <Phone className="mr-2 h-4 w-4" />
+                            Enquiry
+                          </Button>
+                        </Link>
+                      )}
+                      <Button 
+                        variant="outline" 
+                        size="sm"
+                        onClick={() => openProductModal(product)}
+                      >
+                        <Eye className="h-4 w-4" />
+                      </Button>
                     </div>
                   </div>
                 </CardContent>
@@ -847,7 +880,7 @@ const ShopNow = () => {
 
       {/* Features Section */}
       <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
               Why Shop With Us?
@@ -881,7 +914,7 @@ const ShopNow = () => {
 
       {/* Newsletter Section */}
       <section className="py-16 bg-emerald-600 text-white">
-        <div className="container mx-auto px-4 text-center">
+        <div className="container mx-auto text-center">
           <h2 className="text-3xl font-bold mb-4">
             Stay Updated with Latest Offers
           </h2>

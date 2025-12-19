@@ -80,7 +80,7 @@ const categories = [
 const CategoryGrid = () => {
   return (
     <section className="py-24 bg-muted/30">
-      <div className="container px-4">
+      <div className="container">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="heading-lg text-foreground mb-4">

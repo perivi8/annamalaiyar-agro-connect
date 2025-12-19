@@ -127,7 +127,7 @@ const Cart = () => {
         <Header />
         
         <section className="py-16">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto">
             <div className="max-w-2xl mx-auto text-center">
               <div className="w-32 h-32 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-8">
                 <ShoppingCart className="w-16 h-16 text-gray-400" />
@@ -157,7 +157,7 @@ const Cart = () => {
       
       {/* Header Section */}
       <section className="bg-gradient-to-r from-emerald-600 to-emerald-800 text-white py-16">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Shopping Cart</h1>
             <p className="text-xl opacity-90">
@@ -169,7 +169,7 @@ const Cart = () => {
 
       {/* Cart Content */}
       <section className="py-16">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto">
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               

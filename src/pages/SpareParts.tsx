@@ -5,8 +5,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Link } from "react-router-dom";
-import { ArrowRight, Search, Package, Truck, Shield, Clock } from "lucide-react";
+import { ArrowRight, Search, Package, Truck, Shield, Clock, ShoppingCart } from "lucide-react";
 import { useState } from "react";
+import { useToast } from "@/hooks/use-toast";
 
 import sparePart1 from "@/assets/spare-part1.jpg";
 import sparePart2 from "@/assets/spare-part2.jpg";
@@ -111,12 +112,40 @@ const featuredParts = [
     price: "₹8,900",
     image: featured4,
     compatibility: "Tractor 75-90HP",
-    inStock: false
+    inStock: true
   }
 ];
 
 const SpareParts = () => {
+  const { toast } = useToast();
   const [searchTerm, setSearchTerm] = useState("");
+
+  const addToCart = (part: typeof featuredParts[0]) => {
+    const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+    const existingItem = cart.find((item: any) => item.id === part.id && item.partNumber === part.partNumber);
+    
+    if (existingItem) {
+      existingItem.quantity += 1;
+    } else {
+      cart.push({
+        id: part.id,
+        name: part.name,
+        price: part.price,
+        image: part.image,
+        partNumber: part.partNumber,
+        compatibility: part.compatibility,
+        quantity: 1,
+        category: 'spare-parts'
+      });
+    }
+    
+    localStorage.setItem('cart', JSON.stringify(cart));
+    window.dispatchEvent(new Event('cartUpdated'));
+    toast({
+      title: "Added to Cart",
+      description: `${part.name} has been added to your cart`,
+    });
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -124,7 +153,7 @@ const SpareParts = () => {
       
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Genuine Spare Parts
@@ -169,7 +198,7 @@ const SpareParts = () => {
 
       {/* Parts Categories */}
       <section className="py-16">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Browse Parts by Category
@@ -224,7 +253,7 @@ const SpareParts = () => {
 
       {/* Featured Parts */}
       <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Featured Spare Parts
@@ -271,8 +300,16 @@ const SpareParts = () => {
                     className="w-full" 
                     variant={part.inStock ? "default" : "secondary"}
                     disabled={!part.inStock}
+                    onClick={() => part.inStock && addToCart(part)}
                   >
-                    {part.inStock ? "Add to Cart" : "Notify When Available"}
+                    {part.inStock ? (
+                      <>
+                        <ShoppingCart className="mr-2 h-4 w-4" />
+                        Add to Cart
+                      </>
+                    ) : (
+                      "Notify When Available"
+                    )}
                   </Button>
                 </CardContent>
               </Card>
@@ -283,7 +320,7 @@ const SpareParts = () => {
 
       {/* Services Section */}
       <section className="py-16">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto">
           <div className="max-w-4xl mx-auto text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
               Why Choose Our Spare Parts?
@@ -324,7 +361,7 @@ const SpareParts = () => {
 
       {/* CTA Section */}
       <section className="py-16 bg-blue-600 text-white">
-        <div className="container mx-auto px-4 text-center">
+        <div className="container mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Can't Find the Part You Need?
           </h2>

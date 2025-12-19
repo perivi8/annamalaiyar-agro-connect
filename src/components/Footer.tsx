@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className="bg-primary text-primary-foreground">
       {/* Main Footer */}
-      <div className="container px-4 py-16">
+      <div className="container py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-6">
@@ -16,7 +16,7 @@ const Footer = () => {
             </div>
             
             <p className="text-primary-foreground/80 leading-relaxed">
-              Tamil Nadu's trusted partner for agricultural machinery with 25+ years of experience 
+              Tamil Nadu's trusted partner for agricultural machinery since 2021, 
               serving farmers across the state.
             </p>
 
@@ -103,7 +103,7 @@ const Footer = () => {
 
       {/* CTA Banner */}
       <div className="border-t border-primary-foreground/20">
-        <div className="container px-4 py-8">
+        <div className="container py-8">
           <div className="bg-gradient-to-r from-accent/10 to-cta/10 rounded-xl p-8 text-center">
             <h3 className="text-2xl font-bold mb-4">Ready to Boost Your Farm's Productivity?</h3>
             <p className="text-primary-foreground/80 mb-6 max-w-2xl mx-auto">
@@ -129,14 +129,14 @@ const Footer = () => {
 
       {/* Bottom Footer */}
       <div className="border-t border-primary-foreground/20">
-        <div className="container px-4 py-6">
+        <div className="container py-6 px-4">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-primary-foreground/60">
-            <p>© 2021 Thiru Annamalaiyar Agricultural Machinery. All rights reserved.</p>
-            <div className="flex flex-wrap gap-4 md:gap-6">
-              <Link to="/privacy-policy" className="hover:text-primary-foreground transition-colors whitespace-nowrap">Privacy Policy</Link>
-              <Link to="/terms-and-conditions" className="hover:text-primary-foreground transition-colors whitespace-nowrap">Terms & Conditions</Link>
-              <Link to="/shipping-policy" className="hover:text-primary-foreground transition-colors whitespace-nowrap">Shipping Policy</Link>
-              <Link to="/cancellation-refund-policy" className="hover:text-primary-foreground transition-colors whitespace-nowrap">Cancellation & Refund</Link>
+            <p className="text-center md:text-left">© 2021-2025 Thiru Annamalaiyar Agricultural Machinery. All rights reserved.</p>
+            <div className="flex flex-wrap justify-center gap-3 md:gap-6">
+              <Link to="/privacy-policy" className="hover:text-primary-foreground transition-colors">Privacy Policy</Link>
+              <Link to="/terms-and-conditions" className="hover:text-primary-foreground transition-colors">Terms & Conditions</Link>
+              <Link to="/shipping-policy" className="hover:text-primary-foreground transition-colors">Shipping Policy</Link>
+              <Link to="/cancellation-refund-policy" className="hover:text-primary-foreground transition-colors">Cancellation & Refund</Link>
             </div>
           </div>
         </div>

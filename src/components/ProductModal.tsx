@@ -2,7 +2,9 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Star, Heart, ShoppingCart, Minus, Plus, X } from "lucide-react";
+import { Star, Heart, ShoppingCart, Minus, Plus, X, Phone } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
+import { Link } from "react-router-dom";
 
 interface Product {
   id: number;
@@ -29,6 +31,7 @@ interface ProductModalProps {
 }
 
 const ProductModal = ({ product, isOpen, onClose, relatedProducts }: ProductModalProps) => {
+  const { toast } = useToast();
   const [quantity, setQuantity] = useState(1);
 
   if (!product) return null;
@@ -46,8 +49,10 @@ const ProductModal = ({ product, isOpen, onClose, relatedProducts }: ProductModa
     localStorage.setItem('cart', JSON.stringify(cart));
     window.dispatchEvent(new Event('cartUpdated'));
     
-    // Show success message (you can implement toast notification here)
-    alert(`${product.name} added to cart!`);
+    toast({
+      title: "Added to Cart",
+      description: `${product.name} has been added to your cart`,
+    });
   };
 
   const addToWishlist = () => {
@@ -58,9 +63,15 @@ const ProductModal = ({ product, isOpen, onClose, relatedProducts }: ProductModa
       wishlist.push(product);
       localStorage.setItem('wishlist', JSON.stringify(wishlist));
       window.dispatchEvent(new Event('wishlistUpdated'));
-      alert(`${product.name} added to wishlist!`);
+      toast({
+        title: "Added to Wishlist",
+        description: `${product.name} has been added to your wishlist`,
+      });
     } else {
-      alert(`${product.name} is already in your wishlist!`);
+      toast({
+        title: "Already in Wishlist",
+        description: `${product.name} is already in your wishlist`,
+      });
     }
   };
 
@@ -162,37 +173,49 @@ const ProductModal = ({ product, isOpen, onClose, relatedProducts }: ProductModa
 
             {/* Quantity and Actions */}
             <div className="space-y-4">
-              <div className="flex items-center gap-4">
-                <span className="font-medium">Quantity:</span>
-                <div className="flex items-center border rounded-lg">
-                  <Button
-                    variant="ghost"
-                    size="sm"
-                    onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                    disabled={quantity <= 1}
-                  >
-                    <Minus className="h-4 w-4" />
-                  </Button>
-                  <span className="px-4 py-2 font-medium">{quantity}</span>
-                  <Button
-                    variant="ghost"
-                    size="sm"
-                    onClick={() => setQuantity(quantity + 1)}
-                  >
-                    <Plus className="h-4 w-4" />
-                  </Button>
+              {/* Show quantity selector only for spare parts */}
+              {product.category === 'spare-parts' && (
+                <div className="flex items-center gap-4">
+                  <span className="font-medium">Quantity:</span>
+                  <div className="flex items-center border rounded-lg">
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      onClick={() => setQuantity(Math.max(1, quantity - 1))}
+                      disabled={quantity <= 1}
+                    >
+                      <Minus className="h-4 w-4" />
+                    </Button>
+                    <span className="px-4 py-2 font-medium">{quantity}</span>
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      onClick={() => setQuantity(quantity + 1)}
+                    >
+                      <Plus className="h-4 w-4" />
+                    </Button>
+                  </div>
                 </div>
-              </div>
+              )}
 
               <div className="flex gap-3">
-                <Button
-                  onClick={addToCart}
-                  disabled={!product.inStock}
-                  className="flex-1"
-                >
-                  <ShoppingCart className="mr-2 h-4 w-4" />
-                  Add to Cart
-                </Button>
+                {product.category === 'spare-parts' ? (
+                  <Button
+                    onClick={addToCart}
+                    disabled={!product.inStock}
+                    className="flex-1"
+                  >
+                    <ShoppingCart className="mr-2 h-4 w-4" />
+                    {product.inStock ? "Add to Cart" : "Out of Stock"}
+                  </Button>
+                ) : (
+                  <Link to="/request-quote" className="flex-1" onClick={onClose}>
+                    <Button className="w-full">
+                      <Phone className="mr-2 h-4 w-4" />
+                      Enquiry Now
+                    </Button>
+                  </Link>
+                )}
                 <Button
                   variant="outline"
                   onClick={addToWishlist}

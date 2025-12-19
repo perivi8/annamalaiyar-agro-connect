@@ -16,6 +16,7 @@ import {
   ArrowLeft,
   ShoppingCart
 } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
 
 interface CartItem {
   id: number;
@@ -26,6 +27,7 @@ interface CartItem {
 }
 
 const Checkout = () => {
+  const { toast } = useToast();
   const navigate = useNavigate();
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
   const [isProcessing, setIsProcessing] = useState(false);
@@ -77,7 +79,11 @@ const Checkout = () => {
 
   const handlePlaceOrder = async () => {
     if (!validateForm()) {
-      alert('Please fill in all required fields');
+      toast({
+        title: "Missing Information",
+        description: "Please fill in all required fields",
+        variant: "destructive",
+      });
       return;
     }
 
@@ -109,7 +115,7 @@ const Checkout = () => {
       
       {/* Header Section */}
       <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-12">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-3xl md:text-4xl font-bold mb-4">Checkout</h1>
             <p className="text-lg opacity-90">
@@ -120,7 +126,7 @@ const Checkout = () => {
       </section>
 
       <section className="py-12">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto">
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               

@@ -103,7 +103,7 @@ const Services = () => {
       
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-purple-600 to-purple-800 text-white py-20">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Professional Services
@@ -130,7 +130,7 @@ const Services = () => {
 
       {/* Services Grid */}
       <section className="py-16">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Our Service Offerings
@@ -199,7 +199,7 @@ const Services = () => {
 
       {/* Service Process */}
       <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Our Service Process
@@ -234,7 +234,7 @@ const Services = () => {
 
       {/* Emergency Service Section */}
       <section className="py-16">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto">
           <div className="bg-red-50 border border-red-200 rounded-lg p-8 text-center">
             <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <Phone className="w-8 h-8 text-red-600" />
@@ -260,7 +260,7 @@ const Services = () => {
 
       {/* Service Areas */}
       <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
               Service Coverage Areas
@@ -281,7 +281,7 @@ const Services = () => {
 
       {/* CTA Section */}
       <section className="py-16 bg-purple-600 text-white">
-        <div className="container mx-auto px-4 text-center">
+        <div className="container mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Ready to Schedule Your Service?
           </h2>

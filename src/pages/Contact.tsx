@@ -78,7 +78,7 @@ const Contact = () => {
       
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-teal-600 to-teal-800 text-white py-20">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Get in Touch
@@ -102,7 +102,7 @@ const Contact = () => {
 
       {/* Contact Information */}
       <section className="py-16">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Contact Information
@@ -142,7 +142,7 @@ const Contact = () => {
 
       {/* Contact Form and Map */}
       <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
             <div>
@@ -281,7 +281,7 @@ const Contact = () => {
 
       {/* FAQ Section */}
       <section className="py-16">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Frequently Asked Questions
@@ -333,7 +333,7 @@ const Contact = () => {
 
       {/* Emergency Contact */}
       <section className="py-16 bg-red-50">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto">
           <div className="max-w-4xl mx-auto text-center">
             <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
               <Headphones className="w-8 h-8 text-red-600" />

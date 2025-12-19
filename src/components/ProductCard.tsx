@@ -135,7 +135,7 @@ const ProductCard = ({
             onClick={handlePrimaryAction}
             disabled={type === "parts" && !inStock}
           >
-            {type === "machinery" ? "Request Quote" : "Add to Cart"}
+            {type === "machinery" ? "Request Quote" : (inStock ? "Add to Cart" : "Out of Stock")}
             <ArrowRight className="ml-2 h-4 w-4" />
           </Button>
           

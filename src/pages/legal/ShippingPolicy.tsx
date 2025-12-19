@@ -1,21 +1,33 @@
 import { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { ArrowLeft } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 export default function ShippingPolicy() {
   const location = useLocation();
+  const navigate = useNavigate();
   
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location]);
 
   return (
-    <div className="container mx-auto px-4 py-12 max-w-4xl">
+    <div className="container mx-auto py-12 max-w-4xl px-4">
       <Helmet>
         <title>Shipping & Delivery Policy - Thiru Annamalaiyar Agricultural Machinery</title>
         <meta name="description" content="Shipping and delivery policy for Thiru Annamalaiyar Agricultural Machinery. Learn about our delivery process, timelines, and coverage." />
         <link rel="canonical" href={window.location.href} />
       </Helmet>
+
+      <Button
+        variant="ghost"
+        onClick={() => navigate(-1)}
+        className="mb-6 hover:bg-gray-100"
+      >
+        <ArrowLeft className="mr-2 h-4 w-4" />
+        Back
+      </Button>
       
       <header className="mb-8">
         <h1 className="text-3xl font-bold text-gray-900 mb-2">Shipping & Delivery Policy</h1>
@@ -108,8 +120,8 @@ export default function ShippingPolicy() {
           </address>
           
           <p className="mt-8 text-sm text-gray-500">
-            <strong>Last Updated:</strong> August 2025<br />
-            © 2025 Thiru Annamalaiyar Agricultural Machinery. All Rights Reserved.
+            <strong>Last Updated:</strong> December 2025<br />
+            © 2021-2025 Thiru Annamalaiyar Agricultural Machinery. All Rights Reserved.
           </p>
         </section>
       </div>

@@ -54,7 +54,7 @@ const testimonials = [
 const TestimonialsSection = () => {
   return (
     <section className="py-24 bg-background">
-      <div className="container px-4">
+      <div className="container">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="heading-lg text-foreground mb-4">
@@ -121,8 +121,8 @@ const TestimonialsSection = () => {
         </div>
 
         {/* Overall Stats */}
-        <div className="mt-16 text-center">
-          <div className="inline-flex items-center gap-8 bg-gradient-to-r from-primary/5 via-accent/5 to-cta/5 rounded-full px-8 py-4">
+        <div className="mt-16 text-center px-4">
+          <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-8 bg-gradient-to-r from-primary/5 via-accent/5 to-cta/5 rounded-2xl sm:rounded-full px-6 sm:px-8 py-6 sm:py-4">
             <div className="flex items-center gap-2">
               <div className="flex">
                 {[...Array(5)].map((_, i) => (
@@ -131,11 +131,11 @@ const TestimonialsSection = () => {
               </div>
               <span className="text-sm font-medium text-foreground">4.9/5 Rating</span>
             </div>
-            <div className="w-px h-6 bg-border"></div>
+            <div className="hidden sm:block w-px h-6 bg-border"></div>
             <div className="text-sm font-medium text-foreground">
-              10,000+ Happy Customers
+              1,000+ Happy Customers
             </div>
-            <div className="w-px h-6 bg-border"></div>
+            <div className="hidden sm:block w-px h-6 bg-border"></div>
             <div className="text-sm font-medium text-foreground">
               98% Satisfaction Rate
             </div>

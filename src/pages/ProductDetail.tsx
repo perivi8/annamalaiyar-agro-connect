@@ -18,6 +18,7 @@ import {
   Mail,
   MapPin
 } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
 
 // Import all product data from data files
 import { 
@@ -42,6 +43,7 @@ const allProducts = [
 interface ProductDetailProps {}
 
 const ProductDetail: React.FC<ProductDetailProps> = () => {
+  const { toast } = useToast();
   const { category, id } = useParams<{ category: string; id: string }>();
   const navigate = useNavigate();
   const [product, setProduct] = useState<any>(null);
@@ -85,6 +87,10 @@ const ProductDetail: React.FC<ProductDetailProps> = () => {
     localStorage.setItem('cart', JSON.stringify(cart));
     // Update cart count in header
     window.dispatchEvent(new Event('cartUpdated'));
+    toast({
+      title: "Added to Cart",
+      description: `${product.name} has been added to your cart`,
+    });
   };
 
   const addToWishlist = () => {
@@ -98,6 +104,15 @@ const ProductDetail: React.FC<ProductDetailProps> = () => {
       localStorage.setItem('wishlist', JSON.stringify(wishlist));
       // Update wishlist count in header
       window.dispatchEvent(new Event('wishlistUpdated'));
+      toast({
+        title: "Added to Wishlist",
+        description: `${product.name} has been added to your wishlist`,
+      });
+    } else {
+      toast({
+        title: "Already in Wishlist",
+        description: `${product.name} is already in your wishlist`,
+      });
     }
   };
 
@@ -105,7 +120,7 @@ const ProductDetail: React.FC<ProductDetailProps> = () => {
     return (
       <div className="min-h-screen bg-background">
         <Header />
-        <div className="container mx-auto px-4 py-16">
+        <div className="container mx-auto py-16">
           <div className="text-center">
             <h1 className="text-2xl font-bold text-gray-900 mb-4">Product Not Found</h1>
             <Button onClick={() => navigate(-1)}>
@@ -125,7 +140,7 @@ const ProductDetail: React.FC<ProductDetailProps> = () => {
       
       {/* Breadcrumb */}
       <div className="bg-gray-50 py-4">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto">
           <div className="flex items-center space-x-2 text-sm text-gray-600">
             <button onClick={() => navigate('/')} className="hover:text-primary">
               Home
@@ -141,7 +156,7 @@ const ProductDetail: React.FC<ProductDetailProps> = () => {
       </div>
 
       {/* Product Detail */}
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto py-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Product Images */}
           <div className="space-y-4">
@@ -222,26 +237,52 @@ const ProductDetail: React.FC<ProductDetailProps> = () => {
 
             {/* Actions */}
             <div className="space-y-4">
-              <div className="flex items-center gap-4">
-                <div className="flex items-center border rounded-lg">
-                  <button
-                    onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                    className="px-3 py-2 hover:bg-gray-100"
-                  >
-                    -
-                  </button>
-                  <span className="px-4 py-2 border-x">{quantity}</span>
-                  <button
-                    onClick={() => setQuantity(quantity + 1)}
-                    className="px-3 py-2 hover:bg-gray-100"
-                  >
-                    +
-                  </button>
+              {/* Show quantity selector only for spare parts */}
+              {category === 'spare-parts' && (
+                <div className="flex items-center gap-4">
+                  <div className="flex items-center border rounded-lg">
+                    <button
+                      onClick={() => setQuantity(Math.max(1, quantity - 1))}
+                      className="px-3 py-2 hover:bg-gray-100"
+                    >
+                      -
+                    </button>
+                    <span className="px-4 py-2 border-x">{quantity}</span>
+                    <button
+                      onClick={() => setQuantity(quantity + 1)}
+                      className="px-3 py-2 hover:bg-gray-100"
+                    >
+                      +
+                    </button>
+                  </div>
+                  <div className="flex-1 flex gap-2">
+                    <Button 
+                      onClick={addToCart} 
+                      className="flex-1"
+                      disabled={!product.inStock}
+                    >
+                      <ShoppingCart className="mr-2 h-4 w-4" />
+                      {product.inStock ? "Add to Cart" : "Out of Stock"}
+                    </Button>
+                    <Button variant="outline" onClick={addToWishlist}>
+                      <Heart className="h-4 w-4" />
+                    </Button>
+                    <Button variant="outline">
+                      <Share2 className="h-4 w-4" />
+                    </Button>
+                  </div>
                 </div>
-                <div className="flex-1 flex gap-2">
-                  <Button onClick={addToCart} className="flex-1">
-                    <ShoppingCart className="mr-2 h-4 w-4" />
-                    Add to Cart
+              )}
+
+              {/* Show Enquiry button for machinery */}
+              {category !== 'spare-parts' && (
+                <div className="flex items-center gap-2">
+                  <Button 
+                    onClick={() => navigate('/request-quote')} 
+                    className="flex-1"
+                  >
+                    <Phone className="mr-2 h-4 w-4" />
+                    Enquiry Now
                   </Button>
                   <Button variant="outline" onClick={addToWishlist}>
                     <Heart className="h-4 w-4" />
@@ -250,7 +291,7 @@ const ProductDetail: React.FC<ProductDetailProps> = () => {
                     <Share2 className="h-4 w-4" />
                   </Button>
                 </div>
-              </div>
+              )}
 
               <div className="flex flex-col sm:flex-row gap-2">
                 <Button variant="outline" className="flex-1" onClick={() => navigate('/request-quote')}>

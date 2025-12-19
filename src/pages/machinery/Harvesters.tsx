@@ -15,7 +15,7 @@ const Harvesters = () => {
       
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-yellow-600 to-yellow-800 text-white py-20">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Advanced Harvesters
@@ -42,7 +42,7 @@ const Harvesters = () => {
 
       {/* Harvesters Grid */}
       <section className="py-16">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Available Harvester Models
@@ -153,7 +153,7 @@ const Harvesters = () => {
 
       {/* CTA Section */}
       <section className="py-16 bg-yellow-600 text-white">
-        <div className="container mx-auto px-4 text-center">
+        <div className="container mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Ready to Revolutionize Your Harvest?
           </h2>

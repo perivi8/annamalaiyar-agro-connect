@@ -5,7 +5,7 @@ import workshopImage from "@/assets/workshop-service.jpg";
 const AfterSalesSection = () => {
   return (
     <section id="services" className="py-24 bg-muted/30">
-      <div className="container px-4">
+      <div className="container">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="heading-lg text-foreground mb-4">
@@ -19,7 +19,7 @@ const AfterSalesSection = () => {
 
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Service Image */}
-          <div className="relative">
+          <div className="relative pb-8 lg:pb-0">
             <div className="relative overflow-hidden rounded-2xl">
               <img
                 src={workshopImage}
@@ -30,10 +30,10 @@ const AfterSalesSection = () => {
             </div>
             
             {/* Floating Service Stats */}
-            <div className="absolute -bottom-8 -right-8 bg-card border border-border rounded-xl p-6 shadow-[--shadow-product]">
+            <div className="absolute -bottom-4 right-4 sm:right-8 lg:-right-8 bg-card border border-border rounded-xl p-4 sm:p-6 shadow-[--shadow-product]">
               <div className="text-center">
-                <div className="text-2xl font-bold text-primary mb-1">24/7</div>
-                <div className="text-sm text-muted-foreground">Service Support</div>
+                <div className="text-xl sm:text-2xl font-bold text-primary mb-1">24/7</div>
+                <div className="text-xs sm:text-sm text-muted-foreground">Service Support</div>
               </div>
             </div>
           </div>
@@ -50,7 +50,7 @@ const AfterSalesSection = () => {
                     Statewide Service Network
                   </h3>
                   <p className="text-muted-foreground">
-                    15+ service centers across Tamil Nadu with trained technicians and genuine spare parts inventory. 
+                    Service centers across Tamil Nadu with trained technicians and genuine spare parts inventory. 
                     Quick response within 24 hours for emergency repairs.
                   </p>
                 </div>

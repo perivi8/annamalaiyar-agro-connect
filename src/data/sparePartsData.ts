@@ -26,7 +26,8 @@ export const sparePartsData = [
       "Diameter": "76mm"
     },
     popular: false,
-    discount: "15%"
+    discount: "15%",
+    inStock: true
   },
   {
     id: 2,
@@ -48,7 +49,8 @@ export const sparePartsData = [
       "Material": "Cast Iron"
     },
     popular: true,
-    discount: "14%"
+    discount: "14%",
+    inStock: true
   },
   {
     id: 3,
@@ -70,7 +72,8 @@ export const sparePartsData = [
       "Service Life": "500 hours"
     },
     popular: true,
-    discount: "19%"
+    discount: "19%",
+    inStock: true
   },
   {
     id: 4,
@@ -92,7 +95,8 @@ export const sparePartsData = [
       "Material": "Steel/Ceramic"
     },
     popular: false,
-    discount: "13%"
+    discount: "13%",
+    inStock: true
   },
   {
     id: 5,
@@ -114,7 +118,8 @@ export const sparePartsData = [
       "Weight": "5.2 kg"
     },
     popular: false,
-    discount: "13%"
+    discount: "13%",
+    inStock: true
   },
   {
     id: 6,
@@ -136,6 +141,7 @@ export const sparePartsData = [
       "Material": "Hardened Steel"
     },
     popular: true,
-    discount: "12%"
+    discount: "12%",
+    inStock: true
   }
 ];

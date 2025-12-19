@@ -27,14 +27,14 @@ const features = [
   },
   {
     icon: Award,
-    title: "25+ Years Experience",
-    description: "Trusted by 10,000+ farmers with proven track record in agriculture",
+    title: "4+ Years Experience",
+    description: "Trusted by farmers with proven track record in agriculture since 2021",
     color: "text-accent"
   },
   {
     icon: MapPin,
     title: "Local Presence",
-    description: "Service centers in 15+ cities with dedicated spare parts inventory",
+    description: "Service centers across Tamil Nadu with dedicated spare parts inventory",
     color: "text-cta"
   }
 ];
@@ -42,7 +42,7 @@ const features = [
 const WhyChooseUs = () => {
   return (
     <section className="py-24 bg-background">
-      <div className="container px-4">
+      <div className="container">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="heading-lg text-foreground mb-4">
@@ -93,15 +93,15 @@ const WhyChooseUs = () => {
         <div className="bg-gradient-to-r from-primary/5 via-accent/5 to-cta/5 rounded-2xl p-8 md:p-12">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">10,000+</div>
+              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">1,000+</div>
               <div className="text-sm text-muted-foreground">Happy Farmers</div>
             </div>
             <div>
-              <div className="text-3xl md:text-4xl font-bold text-accent mb-2">25+</div>
+              <div className="text-3xl md:text-4xl font-bold text-accent mb-2">4+</div>
               <div className="text-sm text-muted-foreground">Years Experience</div>
             </div>
             <div>
-              <div className="text-3xl md:text-4xl font-bold text-cta mb-2">15+</div>
+              <div className="text-3xl md:text-4xl font-bold text-cta mb-2">5+</div>
               <div className="text-sm text-muted-foreground">Service Centers</div>
             </div>
             <div>

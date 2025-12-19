@@ -26,7 +26,8 @@ export const ploughModels = [
       "Frame Material": "High Tensile Steel"
     },
     popular: true,
-    discount: "10%"
+    discount: "10%",
+    inStock: true
   },
   {
     id: 2,
@@ -48,7 +49,8 @@ export const ploughModels = [
       "Frame Material": "Cast Iron"
     },
     popular: false,
-    discount: "13%"
+    discount: "13%",
+    inStock: true
   },
   {
     id: 3,
@@ -70,7 +72,8 @@ export const ploughModels = [
       "Frame Material": "High Tensile Steel"
     },
     popular: true,
-    discount: "11%"
+    discount: "11%",
+    inStock: true
   },
   {
     id: 4,
@@ -92,7 +95,8 @@ export const ploughModels = [
       "Tine Material": "Spring Steel"
     },
     popular: false,
-    discount: "13%"
+    discount: "13%",
+    inStock: true
   },
   {
     id: 5,
@@ -114,7 +118,8 @@ export const ploughModels = [
       "Shank Material": "High Carbon Steel"
     },
     popular: false,
-    discount: "10%"
+    discount: "10%",
+    inStock: true
   },
   {
     id: 6,
@@ -136,6 +141,7 @@ export const ploughModels = [
       "Frame Material": "Heavy Duty Steel"
     },
     popular: true,
-    discount: "12%"
+    discount: "12%",
+    inStock: true
   }
 ];

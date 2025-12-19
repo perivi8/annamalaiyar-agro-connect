@@ -26,7 +26,8 @@ export const tractorModels = [
       "Gear Box": "12 Forward + 3 Reverse"
     },
     popular: true,
-    discount: "5%"
+    discount: "5%",
+    inStock: true
   },
   {
     id: 2,
@@ -48,7 +49,8 @@ export const tractorModels = [
       "Gear Box": "9 Forward + 3 Reverse"
     },
     popular: false,
-    discount: "6%"
+    discount: "6%",
+    inStock: true
   },
   {
     id: 3,
@@ -70,7 +72,8 @@ export const tractorModels = [
       "Gear Box": "8 Forward + 2 Reverse"
     },
     popular: true,
-    discount: "7%"
+    discount: "7%",
+    inStock: true
   },
   {
     id: 4,
@@ -92,7 +95,8 @@ export const tractorModels = [
       "Gear Box": "12 Forward + 12 Reverse"
     },
     popular: true,
-    discount: "6%"
+    discount: "6%",
+    inStock: true
   },
   {
     id: 5,
@@ -114,7 +118,8 @@ export const tractorModels = [
       "Gear Box": "8 Forward + 2 Reverse"
     },
     popular: false,
-    discount: "7%"
+    discount: "7%",
+    inStock: true
   },
   {
     id: 6,
@@ -136,6 +141,7 @@ export const tractorModels = [
       "Gear Box": "12 Forward + 4 Reverse"
     },
     popular: true,
-    discount: "5%"
+    discount: "5%",
+    inStock: true
   }
 ];

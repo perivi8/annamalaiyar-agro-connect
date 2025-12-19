@@ -26,7 +26,8 @@ export const sprayerModels = [
       "Weight": "3.5 kg"
     },
     popular: true,
-    discount: "17%"
+    discount: "17%",
+    inStock: true
   },
   {
     id: 2,
@@ -48,7 +49,8 @@ export const sprayerModels = [
       "Weight": "2.8 kg"
     },
     popular: false,
-    discount: "17%"
+    discount: "17%",
+    inStock: true
   },
   {
     id: 3,
@@ -70,7 +72,8 @@ export const sprayerModels = [
       "Weight": "850 kg"
     },
     popular: true,
-    discount: "10%"
+    discount: "10%",
+    inStock: true
   },
   {
     id: 4,
@@ -92,7 +95,8 @@ export const sprayerModels = [
       "Weight": "45 kg"
     },
     popular: false,
-    discount: "13%"
+    discount: "13%",
+    inStock: true
   },
   {
     id: 5,
@@ -114,7 +118,8 @@ export const sprayerModels = [
       "Weight": "4.2 kg"
     },
     popular: true,
-    discount: "16%"
+    discount: "16%",
+    inStock: true
   },
   {
     id: 6,
@@ -136,6 +141,7 @@ export const sprayerModels = [
       "Weight": "2.2 kg"
     },
     popular: false,
-    discount: "17%"
+    discount: "17%",
+    inStock: true
   }
 ];
