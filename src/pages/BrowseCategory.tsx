@@ -636,12 +636,12 @@ const BrowseCategory = () => {
                 : "space-y-4"
               }>
                 {filteredParts.map((part) => (
-                  <Card key={part.id} className={`group hover:shadow-lg transition-all duration-300 ${
-                    viewMode === "list" ? "flex flex-row" : ""
+                  <Card key={part.id} className={`group hover:shadow-lg transition-all duration-300 h-full flex ${
+                    viewMode === "list" ? "flex-row" : "flex-col"
                   }`}>
-                    <div className={`relative overflow-hidden bg-gray-100 ${
+                    <div className={`relative overflow-hidden bg-gray-100 flex-shrink-0 ${
                       viewMode === "list" 
-                        ? "w-32 h-32 flex-shrink-0 rounded-l-lg" 
+                        ? "w-32 h-32 rounded-l-lg" 
                         : "rounded-t-lg h-48"
                     }`}>
                       <img
@@ -656,14 +656,14 @@ const BrowseCategory = () => {
                       </div>
                     </div>
                     
-                    <div className={viewMode === "list" ? "flex-1 p-4" : ""}>
-                      <CardHeader className={viewMode === "list" ? "p-0 pb-2" : ""}>
-                        <CardTitle className="text-lg font-bold text-gray-900 line-clamp-2">
+                    <div className={`flex flex-col flex-1 ${viewMode === "list" ? "p-4" : ""}`}>
+                      <CardHeader className={`flex-shrink-0 ${viewMode === "list" ? "p-0 pb-2" : ""}`}>
+                        <CardTitle className="text-lg font-bold text-gray-900 line-clamp-1">
                           {part.name}
                         </CardTitle>
                         <div className="space-y-1">
                           <div className="text-sm text-gray-500">Part #: {part.partNumber}</div>
-                          <div className="text-sm text-gray-600">{part.compatibility}</div>
+                          <div className="text-sm text-gray-600 line-clamp-1">{part.compatibility}</div>
                           <div className="text-sm text-blue-600 font-medium">{part.brand}</div>
                           <div className="flex items-center gap-1">
                             <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
@@ -673,7 +673,7 @@ const BrowseCategory = () => {
                         </div>
                       </CardHeader>
                       
-                      <CardContent className={viewMode === "list" ? "p-0" : ""}>
+                      <CardContent className={`flex-1 flex flex-col justify-end ${viewMode === "list" ? "p-0" : ""}`}>
                         <div className="space-y-3">
                           <p className="text-sm text-gray-600 line-clamp-2">{part.description}</p>
                           

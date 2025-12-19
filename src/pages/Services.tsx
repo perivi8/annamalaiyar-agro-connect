@@ -144,29 +144,31 @@ const Services = () => {
             {services.map((service) => {
               const IconComponent = service.icon;
               return (
-                <Card key={service.id} className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg">
-                  <CardHeader>
+                <Card key={service.id} className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg h-full flex flex-col">
+                  <CardHeader className="flex-shrink-0">
                     <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-4">
                       <IconComponent className="w-8 h-8 text-purple-600" />
                     </div>
                     <CardTitle className="text-xl font-bold text-gray-900">
                       {service.name}
                     </CardTitle>
-                    <CardDescription className="text-gray-600">
+                    <CardDescription className="text-gray-600 line-clamp-2">
                       {service.description}
                     </CardDescription>
                   </CardHeader>
                   
-                  <CardContent>
-                    <div className="space-y-4">
+                  <CardContent className="flex-1 flex flex-col">
+                    <div className="space-y-4 flex-1 flex flex-col">
                       <div className="grid grid-cols-1 gap-2">
                         {service.features.map((feature, index) => (
                           <div key={index} className="flex items-center text-sm text-gray-600">
-                            <div className="w-2 h-2 bg-purple-600 rounded-full mr-2"></div>
+                            <div className="w-2 h-2 bg-purple-600 rounded-full mr-2 flex-shrink-0"></div>
                             {feature}
                           </div>
                         ))}
                       </div>
+                      
+                      <div className="flex-1"></div>
                       
                       <div className="flex justify-between items-center text-sm">
                         <span className="text-purple-600 font-semibold">{service.price}</span>

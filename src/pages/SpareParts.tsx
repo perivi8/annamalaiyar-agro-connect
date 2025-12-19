@@ -236,8 +236,8 @@ const SpareParts = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {featuredParts.map((part) => (
-              <Card key={part.id} className="group hover:shadow-lg transition-all duration-300">
-                <div className="relative overflow-hidden rounded-t-lg bg-gray-100">
+              <Card key={part.id} className="group hover:shadow-lg transition-all duration-300 h-full flex flex-col">
+                <div className="relative overflow-hidden rounded-t-lg bg-gray-100 flex-shrink-0">
                   <img
                     src={part.image}
                     alt={part.name}
@@ -251,19 +251,19 @@ const SpareParts = () => {
                   </div>
                 </div>
                 
-                <CardHeader className="pb-2">
-                  <CardTitle className="text-lg font-bold text-gray-900">
+                <CardHeader className="pb-2 flex-shrink-0">
+                  <CardTitle className="text-lg font-bold text-gray-900 line-clamp-1">
                     {part.name}
                   </CardTitle>
                   <div className="text-sm text-gray-500">
                     Part #: {part.partNumber}
                   </div>
-                  <div className="text-sm text-gray-600">
+                  <div className="text-sm text-gray-600 line-clamp-1">
                     {part.compatibility}
                   </div>
                 </CardHeader>
                 
-                <CardContent>
+                <CardContent className="flex-1 flex flex-col justify-end">
                   <div className="flex items-center justify-between mb-3">
                     <span className="text-xl font-bold text-blue-600">{part.price}</span>
                   </div>

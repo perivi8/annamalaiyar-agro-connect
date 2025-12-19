@@ -9,14 +9,15 @@ import { Minus, Plus, Trash2, ShoppingCart, ArrowRight, ArrowLeft } from "lucide
 
 interface CartItem {
   id: number;
+  uniqueId?: string;
   name: string;
   price: string;
   originalPrice?: string;
   image: string;
   category: string;
-  brand: string;
+  brand?: string;
   quantity: number;
-  inStock: boolean;
+  inStock?: boolean;
 }
 
 const Cart = () => {
@@ -73,11 +74,14 @@ const Cart = () => {
     };
   }, []);
 
-  const updateQuantity = (id: number, newQuantity: number) => {
+  const getItemKey = (item: CartItem) => item.uniqueId || `${item.category}-${item.id}`;
+
+  const updateQuantity = (item: CartItem, newQuantity: number) => {
     if (newQuantity < 1) return;
+    const itemKey = getItemKey(item);
     
-    const updatedCart = cartItems.map(item =>
-      item.id === id ? { ...item, quantity: newQuantity } : item
+    const updatedCart = cartItems.map(cartItem =>
+      getItemKey(cartItem) === itemKey ? { ...cartItem, quantity: newQuantity } : cartItem
     );
     
     setCartItems(updatedCart);
@@ -85,8 +89,9 @@ const Cart = () => {
     window.dispatchEvent(new Event('cartUpdated'));
   };
 
-  const removeItem = (id: number) => {
-    const updatedCart = cartItems.filter(item => item.id !== id);
+  const removeItem = (item: CartItem) => {
+    const itemKey = getItemKey(item);
+    const updatedCart = cartItems.filter(cartItem => getItemKey(cartItem) !== itemKey);
     setCartItems(updatedCart);
     localStorage.setItem('cart', JSON.stringify(updatedCart));
     window.dispatchEvent(new Event('cartUpdated'));
@@ -187,7 +192,7 @@ const Cart = () => {
 
                 <div className="space-y-4">
                   {cartItems.map((item) => (
-                    <Card key={item.id} className="overflow-hidden">
+                    <Card key={getItemKey(item)} className="overflow-hidden">
                       <CardContent className="p-6">
                         <div className="flex flex-col md:flex-row gap-4">
                           {/* Product Image */}
@@ -233,7 +238,7 @@ const Cart = () => {
                                   <Button
                                     variant="ghost"
                                     size="sm"
-                                    onClick={() => updateQuantity(item.id, item.quantity - 1)}
+                                    onClick={() => updateQuantity(item, item.quantity - 1)}
                                     disabled={item.quantity <= 1}
                                   >
                                     <Minus className="h-4 w-4" />
@@ -244,7 +249,7 @@ const Cart = () => {
                                   <Button
                                     variant="ghost"
                                     size="sm"
-                                    onClick={() => updateQuantity(item.id, item.quantity + 1)}
+                                    onClick={() => updateQuantity(item, item.quantity + 1)}
                                   >
                                     <Plus className="h-4 w-4" />
                                   </Button>
@@ -262,7 +267,7 @@ const Cart = () => {
                                 <Button
                                   variant="ghost"
                                   size="sm"
-                                  onClick={() => removeItem(item.id)}
+                                  onClick={() => removeItem(item)}
                                   className="text-red-600 hover:text-red-700 hover:bg-red-50"
                                 >
                                   <Trash2 className="h-4 w-4" />

@@ -68,30 +68,34 @@ const ProductDetail: React.FC<ProductDetailProps> = () => {
     }
   }, [category, id]);
 
+  const getUniqueId = () => `${category}-${product.id}`;
+
   const addToCart = () => {
     // Add to cart functionality
-    const cartItems = JSON.parse(localStorage.getItem('cartItems') || '[]');
-    const existingItem = cartItems.find((item: any) => item.id === product.id);
+    const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+    const uniqueId = getUniqueId();
+    const existingItem = cart.find((item: any) => item.uniqueId === uniqueId);
     
     if (existingItem) {
       existingItem.quantity += quantity;
     } else {
-      cartItems.push({ ...product, quantity });
+      cart.push({ ...product, uniqueId, quantity });
     }
     
-    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    localStorage.setItem('cart', JSON.stringify(cart));
     // Update cart count in header
     window.dispatchEvent(new Event('cartUpdated'));
   };
 
   const addToWishlist = () => {
     // Add to wishlist functionality
-    const wishlistItems = JSON.parse(localStorage.getItem('wishlistItems') || '[]');
-    const exists = wishlistItems.find((item: any) => item.id === product.id);
+    const wishlist = JSON.parse(localStorage.getItem('wishlist') || '[]');
+    const uniqueId = getUniqueId();
+    const exists = wishlist.find((item: any) => item.uniqueId === uniqueId);
     
     if (!exists) {
-      wishlistItems.push(product);
-      localStorage.setItem('wishlistItems', JSON.stringify(wishlistItems));
+      wishlist.push({ ...product, uniqueId });
+      localStorage.setItem('wishlist', JSON.stringify(wishlist));
       // Update wishlist count in header
       window.dispatchEvent(new Event('wishlistUpdated'));
     }
