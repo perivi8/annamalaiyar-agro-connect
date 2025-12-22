@@ -36,91 +36,81 @@ export default function PrivacyPolicy() {
 
       <div className="prose max-w-none">
         <p className="mb-6">
-          At Thiru Annamalaiyar Agricultural Machinery, we are committed to protecting the privacy of farmers, distributors, and customers who trust us with their agricultural machinery needs. Whether you're purchasing a tractor, tiller, sprayer, or harvester, or requesting service support, we ensure that your personal and business information is safeguarded with the highest standards of confidentiality, security, and compliance.
-        </p>
-        <p className="mb-8">
-          This Privacy Policy explains what information we collect, how we use it, how we protect it, and your rights when interacting with our website, products, and services.
+          Thiru Annamalaiyar Agricultural Machinery is committed to protecting your privacy. This Privacy Policy outlines how we collect, use, and safeguard your personal information when you visit our website https://thiruannamalaiyar.com or use our services.
         </p>
 
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-4">Information We Collect</h2>
-          <p className="mb-4">
-            When you engage with us—through purchases, service bookings, or business inquiries—we may collect:
-          </p>
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">1. Information We Collect</h2>
+          <p className="mb-4">We may collect the following information:</p>
           <ul className="list-disc pl-6 mb-4 space-y-2">
-            <li>Full Name / Business Name</li>
-            <li>Email Address & Phone Number</li>
-            <li>Billing & Shipping Address</li>
-            <li>Machinery Purchase/Service History</li>
-            <li>Payment Details (via secure third-party gateways)</li>
-            <li>GST or Business Identification (for B2B clients)</li>
-            <li>Device & Browser Information (if using our website)</li>
-            <li>Cookies & Analytics Data (for performance tracking)</li>
+            <li><strong>Personal Information:</strong> Name, email address, phone number, and other details you provide during checkout, or service requests.</li>
+            <li><strong>Payment Information:</strong> We use secure third-party payment processors (Razorpay, UPI, Bank Transfer) to handle payment details. We do not store your complete payment information on our servers.</li>
+            <li><strong>Usage Data:</strong> Information about how you use our website, including IP address, browser type, pages visited, and time spent on pages.</li>
+            <li><strong>Cookies:</strong> We use cookies to enhance your browsing experience. You can choose to disable cookies through your browser settings.</li>
           </ul>
-          <p>We collect only the data necessary to deliver efficient and reliable agricultural machinery sales and service.</p>
         </section>
 
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-4">Why We Collect Your Information</h2>
-          <p className="mb-4">Your data is used solely for business and service purposes, including:</p>
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">2. How We Use Your Information</h2>
+          <p className="mb-4">We use the collected information to:</p>
           <ul className="list-disc pl-6 space-y-2">
-            <li>Processing machinery sales and service requests</li>
-            <li>Providing delivery, warranty, and after-sales support</li>
-            <li>Sending service reminders, updates, or safety notifications</li>
-            <li>Offering promotional content (only if you opt in)</li>
-            <li>Coordinating with logistics for large machinery transport</li>
-            <li>Meeting legal, tax, and compliance requirements</li>
+            <li>Process and fulfil orders and deliver services.</li>
+            <li>Communicate with you about your orders, inquiries, or other requests.</li>
+            <li>Improve our website and services.</li>
+            <li>Send promotional emails or newsletters, if you have opted in.</li>
           </ul>
         </section>
 
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-4">How We Protect Your Information</h2>
-          <p className="mb-4">We implement strong security measures to protect your data:</p>
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">3. Sharing Your Information</h2>
+          <p className="mb-4">We do not sell or rent your personal information to third parties. We may share your information with:</p>
           <ul className="list-disc pl-6 space-y-2">
-            <li><strong>SSL Encryption:</strong> Secures all online communication</li>
-            <li><strong>Secure Payments:</strong> Transactions processed via trusted PCI-compliant gateways—we do not store banking details</li>
-            <li><strong>Authorized Access Only:</strong> Sensitive data is accessed strictly by trained staff under confidentiality protocols</li>
-            <li><strong>Regular System Reviews:</strong> Firewalls and audits safeguard against misuse</li>
+            <li><strong>Service Providers:</strong> Third-party vendors who assist us in operating our website, conducting our business, or servicing you (logistics, payment processors).</li>
+            <li><strong>Legal Requirements:</strong> If required by law, we may disclose your information to comply with legal obligations or protect our rights.</li>
           </ul>
         </section>
 
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-4">Your Rights & Choices</h2>
-          <p className="mb-4">As a customer, you may:</p>
-          <ul className="list-disc pl-6 space-y-2 mb-4">
-            <li>Request access to the data we hold about you</li>
-            <li>Ask for corrections or updates to your details</li>
-            <li>Request deletion of your data (subject to legal requirements)</li>
-            <li>Withdraw consent from promotional communications</li>
-            <li>Report concerns about privacy or data misuse</li>
-          </ul>
-          <p>We respond to valid requests within 30 business days.</p>
-        </section>
-
-        <section className="mb-8">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-4">Third-Party Sharing</h2>
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">4. Data Security</h2>
           <p>
-            We do not sell or rent your data. Information is shared only with:
+            We implement appropriate security measures to protect your personal information from unauthorized access, alteration, disclosure, or destruction. This includes SSL encryption, secure payment gateways, and restricted access to sensitive data.
           </p>
-          <ul className="list-disc pl-6 mt-2 space-y-2">
-            <li>Logistics and transport providers (for delivery of machinery)</li>
-            <li>Payment processors (for secure financial transactions)</li>
-            <li>Regulatory authorities (if required under law)</li>
-          </ul>
         </section>
 
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-4">Policy Updates</h2>
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">5. Data Retention</h2>
           <p>
-            This Privacy Policy may be updated periodically to reflect changes in business practices, legal requirements, or technology. Any updates will be posted here with a revised "Last Updated" date.
+            We retain your personal information only as long as necessary to fulfil the purposes described in this policy or to comply with legal requirements. Afterward, data is securely deleted or anonymized.
+          </p>
+        </section>
+
+        <section className="mb-8">
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">6. Changes to This Policy</h2>
+          <p>
+            We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated effective date.
+          </p>
+        </section>
+
+        <section className="mb-8">
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">7. Your Rights</h2>
+          <p className="mb-4">
+            You have the right to access, correct, or delete your personal information. To exercise these rights, please contact us at thiruannamalaiyar014@gmail.com. We will respond within 30 business days.
+          </p>
+        </section>
+
+        <section className="mb-8">
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">8. Your Privacy Matters to Us</h2>
+          <p className="mb-4">
+            In accordance with the Information Technology Act, 2000 and applicable rules, we are committed to addressing any concerns or feedback you may have regarding this Privacy Policy or the handling of your personal information.
           </p>
         </section>
 
         <section className="border-t pt-8">
           <h2 className="text-2xl font-semibold text-gray-800 mb-4">Contact Us</h2>
-          <p className="mb-4">For privacy-related queries, requests, or complaints, please reach us at:</p>
+          <p className="mb-4">For any privacy-related questions, concerns, or feedback, please contact us at:</p>
           <address className="not-italic">
             <p className="font-semibold">Thiru Annamalaiyar Agricultural Machinery</p>
+            <p className="font-medium text-gray-700">Owner: Nagamuthu Kuppan</p>
             <p>📍 OPP TO NEW TALUK OFFICE, 14/88, A.C.K Road, Madurantakam, Chengalpattu, Tamil Nadu – 603306</p>
             <p>📞 Phone: <a href="tel:+919894377407" className="text-blue-600 hover:underline">+91 98943 77407</a></p>
             <p>📧 Email: <a href="mailto:thiruannamalaiyar014@gmail.com" className="text-blue-600 hover:underline">thiruannamalaiyar014@gmail.com</a></p>

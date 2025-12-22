@@ -39,6 +39,7 @@ import PrivacyPolicy from "./pages/legal/PrivacyPolicy";
 import TermsAndConditions from "./pages/legal/TermsAndConditions";
 import ShippingPolicy from "./pages/legal/ShippingPolicy";
 import CancellationRefundPolicy from "./pages/legal/CancellationRefundPolicy";
+import AboutUs from "./pages/AboutUs";
 
 const queryClient = new QueryClient();
 
@@ -93,6 +94,9 @@ const App = () => (
           <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
           <Route path="/shipping-policy" element={<ShippingPolicy />} />
           <Route path="/cancellation-refund-policy" element={<CancellationRefundPolicy />} />
+          
+          {/* About Us */}
+          <Route path="/about-us" element={<AboutUs />} />
           
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

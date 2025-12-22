@@ -31,116 +31,113 @@ export default function TermsAndConditions() {
       
       <header className="mb-8">
         <h1 className="text-3xl font-bold text-gray-900 mb-2">Terms & Conditions</h1>
-        <p className="text-gray-600">Last Updated: August 2025</p>
+        <p className="text-gray-600">Last Updated: December 2025</p>
       </header>
 
       <div className="prose max-w-none">
         <p className="mb-6">
-          Welcome to Thiru Annamalaiyar Agricultural Machinery. By purchasing our products, accessing our services, or using our website, you agree to the following Terms & Conditions. These terms govern all transactions, service requests, and interactions with our business.
-        </p>
-        <p className="mb-8 text-red-600 font-medium">
-          If you do not agree to these terms, please discontinue use of our services.
+          This document is an electronic record generated under the provisions of the Information Technology Act, 2000 and the applicable rules, including any amendments. This document is published in line with Rule 3(1) of the Information Technology (Intermediaries Guidelines) Rules, 2011, which mandates the publication of the website's terms of use, privacy policy, and rules for user access and interaction on https://thiruannamalaiyar.com.
         </p>
 
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-4">1. General Use of Services</h2>
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">1. Introduction</h2>
+          <p className="mb-4">These terms and conditions shall govern your use of our website.</p>
           <ul className="list-disc pl-6 space-y-2">
-            <li>You confirm that you are legally authorized to purchase agricultural machinery and related services.</li>
-            <li>Products and services must only be used for lawful farming and agricultural purposes.</li>
-            <li>We reserve the right to decline, suspend, or cancel orders in cases of misuse, fraud, or regulatory violations.</li>
+            <li>By using our website, you accept these terms and conditions in full; accordingly, if you disagree with these terms and conditions or any part of these terms and conditions, you must not use our website.</li>
+            <li>If you register with our website, submit any material to our website or use any of our website services, we will ask you to expressly agree to these terms and conditions.</li>
+            <li>By using our website or agreeing to these terms and conditions, you warrant and represent to us that you are at least 18 years of age.</li>
+            <li>Our website uses cookies; by using our website or agreeing to these terms and conditions, you consent to our use of cookies in accordance with the terms of our Privacy Policy.</li>
           </ul>
         </section>
 
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-4">2. Products & Specifications</h2>
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">2. Acceptable Use</h2>
+          <p className="mb-4">You must not:</p>
           <ul className="list-disc pl-6 space-y-2">
-            <li>We provide tractors, tillers, sprayers, harvesters, and agricultural machinery.</li>
-            <li>Product images and brochures are for reference; actual products may vary slightly in design or features.</li>
-            <li>Specifications are subject to updates or improvements without prior notice.</li>
-            <li>Customers are encouraged to confirm compatibility with their farming requirements before purchase.</li>
+            <li>Use our website in any way or take any action that causes, or may cause, damage to the website or impairment of the performance, availability or accessibility of the website.</li>
+            <li>Use our website in any way that is unlawful, illegal, fraudulent or harmful, or in connection with any unlawful, illegal, fraudulent or harmful purpose or activity.</li>
+            <li>Use our website to copy, store, host, transmit, send, use, publish or distribute any material which consists of (or is linked to) any spyware, computer virus, Trojan horse, worm, keystroke logger, rootkit or other malicious computer software.</li>
+            <li>Conduct any systematic or automated data collection activities (including without limitation scraping, data mining, data extraction and data harvesting) on or in relation to our website without our express written consent.</li>
+            <li>Access or otherwise interact with our website using any robot, spider or other automated means except for the purpose of search engine indexing.</li>
+            <li>Use data collected from our website for any direct marketing activity (including without limitation email marketing, SMS marketing, telemarketing and direct mailing).</li>
+            <li>You must ensure that all the information you supply to us through our website, or in relation to our website, is true, accurate, current, complete and non-misleading.</li>
+            <li>You agree to use this website only for lawful purposes and in a way that does not infringe the rights of, restrict, or inhibit anyone else's use and enjoyment of the site.</li>
           </ul>
         </section>
 
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-4">3. Pricing & Payments</h2>
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">3. User Accounts</h2>
+          <p className="mb-4">To access certain features, you may need to create an account. You are responsible for maintaining the confidentiality of your account details and are fully responsible for all activities that occur under your account. We may:</p>
           <ul className="list-disc pl-6 space-y-2">
-            <li>All prices are listed in Indian Rupees (INR ₹) unless stated otherwise.</li>
-            <li>Prices may vary based on model, customization, or government taxes.</li>
-            <li>Payments must be made in full at the time of purchase unless alternate financing or dealer arrangements are agreed.</li>
-            <li>We accept payments via bank transfer, UPI, cards, or authorized financing partners.</li>
+            <li>Suspend your account</li>
+            <li>Cancel your account</li>
+            <li>Edit your account details</li>
           </ul>
+          <p className="mt-4">at any time in our sole discretion without notice or explanation. You may cancel your account on our website using your account control panel on the website.</p>
         </section>
 
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-4">4. Shipping & Delivery</h2>
-          <ul className="list-disc pl-6 space-y-2">
-            <li>Delivery timelines vary depending on location, order size, and logistics availability.</li>
-            <li>Customers must provide accurate delivery details and ensure accessibility for heavy vehicles.</li>
-            <li>Unloading and installation support may be arranged with prior notice.</li>
-            <li>Risk of goods transfers to the customer upon delivery.</li>
-            <li>Please refer to our Shipping Policy for detailed terms.</li>
-          </ul>
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">4. Product & Service Information</h2>
+          <p>
+            We aim to provide accurate descriptions and pricing of our products and services on the website. However, we do not guarantee that the information, including availability and pricing, is always accurate, complete, or current. We reserve the right to correct errors and update information without prior notice.
+          </p>
         </section>
 
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-4">5. Warranty & Service</h2>
-          <ul className="list-disc pl-6 space-y-2">
-            <li>All machinery comes with manufacturer warranty coverage, subject to conditions mentioned in the warranty card.</li>
-            <li>Warranty covers manufacturing defects but not damage caused by misuse, poor maintenance, or unauthorized repairs.</li>
-            <li>Regular servicing and maintenance are the responsibility of the customer, except as provided under warranty.</li>
-          </ul>
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">5. Third-Party Links</h2>
+          <p>
+            Our website may contain links to third-party websites that are not under our control. We are not responsible for the content, policies, or practices of these external sites. Accessing third-party links is at your own risk.
+          </p>
         </section>
 
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-4">6. Returns & Refunds</h2>
-          <p className="mb-4">Due to the nature of heavy machinery, returns are not accepted once the equipment is delivered and installed.</p>
-          <p className="mb-4">Refunds or replacements are available only in cases of:</p>
-          <ul className="list-disc pl-6 space-y-2 mb-4">
-            <li>Wrong model delivered</li>
-            <li>Verified manufacturing defects</li>
-            <li>Transport damage reported at the time of delivery</li>
-          </ul>
-          <p>For details, please see our Cancellation & Refund Policy.</p>
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">6. Intellectual Property Rights</h2>
+          <p>
+            All content on this site — including text, images, graphics, logos, and software — is owned or licensed by Thiru Annamalaiyar Agricultural Machinery and protected by applicable intellectual property laws. You may not reproduce, distribute, or use our content without our prior written consent.
+          </p>
         </section>
 
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-4">7. Customer Responsibilities</h2>
-          <p className="mb-4">By engaging with us, you agree to:</p>
-          <ul className="list-disc pl-6 space-y-2">
-            <li>Provide accurate purchase and delivery information</li>
-            <li>Maintain machinery in accordance with manufacturer guidelines</li>
-            <li>Ensure safe operation by trained personnel</li>
-            <li>Not resell or misuse products under false representation</li>
-          </ul>
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">7. Limitation of Liability</h2>
+          <p>
+            To the extent permitted by law, Thiru Annamalaiyar Agricultural Machinery shall not be liable for any indirect, incidental, or consequential damages arising out of or related to your use of the website, including but not limited to damages for loss of profits, data, or other intangible losses.
+          </p>
         </section>
 
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-4">8. Intellectual Property</h2>
-          <p>All logos, brochures, product images, manuals, and branding are the intellectual property of Thiru Annamalaiyar Agricultural Machinery. Unauthorized reproduction is prohibited.</p>
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">8. Disclaimer of Warranties</h2>
+          <p>
+            This website is provided "as is" and "as available" without any warranties of any kind, either express or implied. We do not guarantee that the site will always be available, secure, or free from errors or viruses.
+          </p>
         </section>
 
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-4">9. Limitation of Liability</h2>
-          <p className="mb-4">We shall not be liable for:</p>
-          <ul className="list-disc pl-6 space-y-2">
-            <li>Delays caused by logistics or external factors beyond our control</li>
-            <li>Natural wear and tear of machinery components</li>
-            <li>Losses due to improper usage or non-compliance with safety instructions</li>
-            <li>Indirect, incidental, or consequential damages</li>
-          </ul>
-          <p className="mt-4">Our liability is limited to the invoice value of the machinery supplied.</p>
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">9. Indemnity</h2>
+          <p>
+            You agree to indemnify, defend, and hold harmless Thiru Annamalaiyar Agricultural Machinery and its affiliates, directors, officers, employees, and agents from and against all claims, liabilities, damages, losses, or expenses, including reasonable legal fees, arising out of your use of the website or your violation of these Terms & Conditions.
+          </p>
         </section>
 
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-4">10. Governing Law & Jurisdiction</h2>
-          <p>These Terms & Conditions are governed by the laws of India, and any disputes will be subject to the jurisdiction of the courts in Chengalpattu, Tamil Nadu.</p>
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">10. Changes to Terms</h2>
+          <p>
+            We reserve the right to modify or update these Terms & Conditions at any time without prior notice. Changes will be effective once posted on this page. We recommend checking this page periodically for updates.
+          </p>
+        </section>
+
+        <section className="mb-8">
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">11. Governing Law</h2>
+          <p>
+            These Terms & Conditions shall be governed by and interpreted in accordance with the laws of India, without regard to its conflict of law principles. Any disputes arising from or relating to these terms, your use of the website, or our services shall be subject to the exclusive jurisdiction of the courts located in Chengalpattu, Tamil Nadu, India.
+          </p>
         </section>
 
         <section className="border-t pt-8">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-4">11. Contact Us</h2>
-          <p className="mb-4">For any questions or support regarding these Terms & Conditions, please contact:</p>
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">12. Contact Us</h2>
+          <p className="mb-4">If you have any questions or concerns about these Terms & Conditions, please contact us at:</p>
           <address className="not-italic">
             <p className="font-semibold">Thiru Annamalaiyar Agricultural Machinery</p>
+            <p className="font-medium text-gray-700">Owner: Nagamuthu Kuppan</p>
             <p>📍 OPP TO NEW TALUK OFFICE, 14/88, A.C.K Road, Madurantakam, Chengalpattu, Tamil Nadu – 603306</p>
             <p>📞 Phone: <a href="tel:+919894377407" className="text-blue-600 hover:underline">+91 98943 77407</a></p>
             <p>📧 Email: <a href="mailto:thiruannamalaiyar014@gmail.com" className="text-blue-600 hover:underline">thiruannamalaiyar014@gmail.com</a></p>
