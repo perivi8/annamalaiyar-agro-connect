@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Youtube, MessageCircle } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -20,18 +20,7 @@ const Footer = () => {
               serving farmers across the state.
             </p>
 
-            {/* Social Links */}
-            <div className="flex gap-3">
-              <Button size="sm" variant="secondary" className="p-2 bg-white/10 hover:bg-white/20">
-                <Facebook className="h-4 w-4" />
-              </Button>
-              <Button size="sm" variant="secondary" className="p-2 bg-white/10 hover:bg-white/20">
-                <Instagram className="h-4 w-4" />
-              </Button>
-              <Button size="sm" variant="secondary" className="p-2 bg-white/10 hover:bg-white/20">
-                <Youtube className="h-4 w-4" />
-              </Button>
-            </div>
+
           </div>
 
           {/* Quick Links */}
